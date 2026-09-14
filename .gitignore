@@ -1,0 +1,4 @@
+*.xlsx
+src/data.json
+.DS_Store
+__pycache__/
