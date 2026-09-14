@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AVVA · Plano de Comunicação · 4º Trimestre</title>
+<style>
+  :root{
+    --marrom:#655244; --creme:#F5F0E8; --branco:#FEFAF6; --areia:#EBE2D2; --oliva:#696E54;
+    --bege:#EDE8DF; --ink:#655244; --sub:rgba(101,82,68,.65); --linha:#EBE2D2;
+    --fonte:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:var(--fonte);background:var(--creme);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:28px 22px 80px}
+  em{font-style:italic}
+
+  #hero{background:var(--marrom);border-radius:28px;padding:54px 48px 46px;color:var(--branco)}
+  #hero .logo{font-weight:900;font-size:34px;letter-spacing:6px;color:var(--branco)}
+  #hero .sub{margin-top:10px;font-size:14px;color:rgba(254,250,246,.75)}
+  #hero .sub b{color:var(--branco)}
+  #hero h1{margin-top:34px;font-size:44px;font-weight:900;letter-spacing:-1.2px;line-height:1.08}
+  #hero .h-note{margin-top:16px;font-size:15px;max-width:720px;color:rgba(254,250,246,.85)}
+  .pills{margin-top:26px;display:flex;gap:10px;flex-wrap:wrap}
+  .pill{background:rgba(254,250,246,.12);border:1px solid rgba(254,250,246,.25);border-radius:999px;padding:7px 16px;font-size:11.5px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:rgba(254,250,246,.9)}
+
+  .kicker{font-size:11.5px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:var(--oliva)}
+  .sect{margin-top:56px}
+  .sect-h{font-size:30px;font-weight:900;letter-spacing:-0.8px;margin-top:6px}
+  .sect-d{margin-top:8px;font-size:15px;color:var(--sub);max-width:760px}
+  .num{display:inline-block;font-weight:900;color:var(--areia);font-size:30px;margin-right:10px;vertical-align:baseline}
+
+  .panel{background:var(--marrom);color:var(--branco);border-radius:22px;padding:34px 36px;margin-top:22px}
+  .panel .pk{font-size:11px;font-weight:700;letter-spacing:1.6px;text-transform:uppercase;color:rgba(254,250,246,.6)}
+  .panel .pt{font-size:23px;font-weight:900;letter-spacing:-0.5px;margin-top:8px;line-height:1.25}
+  .panel .pd{margin-top:12px;font-size:14.5px;color:rgba(254,250,246,.88)}
+  .panel .pd b{color:var(--branco)}
+
+  .grid{display:grid;gap:14px;margin-top:20px}
+  .g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .card{background:var(--branco);border:1px solid var(--linha);border-radius:18px;padding:22px 22px 20px}
+  .card .ck{font-size:10.5px;font-weight:700;letter-spacing:1.4px;text-transform:uppercase;color:var(--oliva)}
+  .card .ct{font-size:16.5px;font-weight:800;margin-top:6px;letter-spacing:-0.2px;line-height:1.3}
+  .card .cd{margin-top:8px;font-size:13.5px;color:rgba(101,82,68,.85)}
+  .card.dark{background:var(--marrom);border-color:var(--marrom)}
+  .card.dark .ct{color:var(--branco)}
+  .card.dark .cd{color:rgba(254,250,246,.85)}
+  .card.dark .ck{color:var(--areia)}
+  .card.oliva{background:var(--oliva);border-color:var(--oliva)}
+  .card.oliva .ct{color:var(--branco)}
+  .card.oliva .cd{color:rgba(254,250,246,.88)}
+  .card.oliva .ck{color:rgba(254,250,246,.7)}
+
+  table{width:100%;border-collapse:collapse;margin-top:20px;background:var(--branco);border-radius:18px;overflow:hidden;font-size:13.5px}
+  .tblwrap{border:1px solid var(--linha);border-radius:18px;overflow:hidden;margin-top:20px;background:var(--branco)}
+  .tblwrap table{margin-top:0;border-radius:0}
+  .tblscroll{overflow-x:auto}
+  th{background:var(--bege);text-align:left;padding:12px 14px;font-size:10.5px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;color:var(--oliva);white-space:nowrap}
+  td{padding:12px 14px;border-top:1px solid var(--linha);vertical-align:top;color:rgba(101,82,68,.9)}
+  td b{color:var(--marrom)}
+  tr.hl td{background:#F1EBDF}
+
+  .tagline{display:inline-block;background:var(--oliva);color:var(--branco);font-weight:800;font-size:12px;letter-spacing:.4px;padding:7px 15px;border-radius:999px;margin-top:14px}
+  .divisor{height:1px;background:var(--linha);margin:56px 0 0}
+
+  .decision{background:var(--branco);border:2px solid var(--oliva);border-radius:18px;padding:20px 22px;margin-top:14px}
+  .decision .dt{font-weight:800;font-size:15.5px}
+  .decision .dd{margin-top:6px;font-size:13.5px;color:rgba(101,82,68,.85)}
+  .decision .dtag{display:inline-block;background:var(--oliva);color:var(--branco);font-size:10px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;padding:4px 10px;border-radius:999px;margin-bottom:8px}
+
+  .roadmap{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:20px}
+  .ro{background:var(--branco);border:1px solid var(--linha);border-radius:18px;padding:20px}
+  .ro .rm{font-size:10.5px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:var(--oliva)}
+  .ro .rt{font-size:20px;font-weight:900;margin-top:4px;letter-spacing:-0.4px}
+  .ro .rd{margin-top:8px;font-size:12.5px;color:rgba(101,82,68,.8)}
+
+  .pdf-btn{position:fixed;bottom:26px;right:26px;z-index:99;background:var(--marrom);color:var(--branco);border:none;cursor:pointer;font-family:var(--fonte);font-weight:800;font-size:13px;letter-spacing:.4px;padding:13px 22px;border-radius:999px;box-shadow:0 10px 30px rgba(101,82,68,.35)}
+
+  @media(max-width:760px){
+    #hero{padding:36px 26px}
+    #hero h1{font-size:30px}
+    .g2,.g3,.roadmap{grid-template-columns:1fr}
+    .sect-h{font-size:24px}
+  }
+  @page{size:A4;margin:12mm}
+  @media print{
+    .pdf-btn{display:none!important}
+    *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+    body{background:var(--creme)!important}
+    .card,.panel,.decision,.ro,tr{break-inside:avoid;page-break-inside:avoid}
+    .sect{break-inside:auto}
+    .kicker{break-after:avoid}
+    thead{display:table-header-group}
+  }
+</style>
+</head>
+<body>
+<button class="pdf-btn" onclick="window.print()">Baixar em PDF</button>
+<div class="wrap">
+
+  <div id="hero">
+    <div class="logo">AVVA</div>
+    <div class="sub"><b>Wellness House</b> | Plano de Comunicação da AVVA</div>
+    <h1>4º trimestre<br>Do alcance ao <em>pertencimento.</em></h1>
+    <div class="h-note">Plano estratégico de comunicação para outubro, novembro e dezembro de 2026, com setembro como mês de transição já em curso. Construído a partir do diagnóstico completo do funil, dos aprendizados do 3º trimestre e do direcionamento estratégico apresentado pela liderança da AVVA.</div>
+    <div class="pills">
+      <span class="pill">Badauê · Setembro 2026</span>
+      <span class="pill">Documento para decisão</span>
+    </div>
+  </div>
+
+  <!-- 01 DIRECIONAMENTO -->
+  <div class="sect">
+    <div class="kicker">01 · Direcionamento estratégico</div>
+    <div class="sect-h">A lógica de todo o <em>plano.</em></div>
+    <div class="grid g2">
+      <div class="card"><div class="ck">Onde estamos</div><div class="cd">A AVVA construiu desejo em escala, mais de 11 milhões de visualizações no ano, 40 mil seguidores e pessoas criando conteúdo espontaneamente com a casa. Mas a aquisição de clientes está mais lenta que o plano de negócios, a percepção pública ficou ancorada na beleza da estrutura e o funil comercial perdeu oportunidades já geradas.</div></div>
+      <div class="card"><div class="ck">Principal desafio</div><div class="cd">Converter o desejo já construído em receita recorrente, deslocando a percepção de "lugar lindo de treinar" para casa de saúde e longevidade, sem apagar o desejo no processo.</div></div>
+      <div class="card"><div class="ck">Principal oportunidade</div><div class="cd">O público que mais converte já está dentro da casa. Membros satisfeitos (NPS elevado), eventos internos com a maior taxa de conversão registrada e um volume de contatos quentes já mapeado no funil que, bem trabalhado, representa dezenas de matrículas sem um real a mais em alcance.</div></div>
+      <div class="card"><div class="ck">Onde queremos chegar</div><div class="cd">Fechar dezembro com a AVVA percebida como referência em longevidade saudável, com crescimento de membros puxado por indicação e conversão, e com a comunicação sustentando o reposicionamento de valor da oferta.</div></div>
+    </div>
+    <div class="panel">
+      <div class="pk">Grande ideia do trimestre</div>
+      <div class="pt">Do alcance ao pertencimento. Da estética ao benefício. Da visibilidade à longevidade.</div>
+      <div class="pd">A AVVA para de se comportar como uma marca que busca audiência e passa a se comportar como um círculo que se deseja integrar. Menos volume, mais valor. Menos exposição, mais escassez. A comunicação deixa de mostrar o lugar e passa a mostrar o que o lugar faz pela vida de quem pertence a ele, <b>estilo de vida praticado como medicina da longevidade.</b></div>
+    </div>
+    <div class="grid g3" style="margin-top:14px">
+      <div class="card dark"><div class="ck">Movimento 1</div><div class="ct">Ocupar o território da longevidade saudável</div><div class="cd">Benefício antes de beleza. Prevenção, saúde física e mental e estilo de vida no centro de todo conteúdo.</div></div>
+      <div class="card dark"><div class="ck">Movimento 2</div><div class="ct">Fazer da comunidade o motor de crescimento</div><div class="cd">Membro traz membro vira programa com nome, mecânica e comunicação dedicada, dentro e fora da casa.</div></div>
+      <div class="card dark"><div class="ck">Movimento 3</div><div class="ct">Construir escassez e privacidade</div><div class="cd">Fim da permuta com influenciadores, conteúdo produzido por quem pertence, privacidade como novo luxo.</div></div>
+      <div class="card dark"><div class="ck">Movimento 4</div><div class="ct">Fechar o funil</div><div class="cd">Comunicação e comercial operando como uma máquina única, da primeira resposta à oferta de fechamento na visita.</div></div>
+      <div class="card dark"><div class="ck">Movimento 5</div><div class="ct">Reequilibrar a marca para o público masculino</div><div class="cd">Performance, ciência e âncoras de autoridade, sem alienar as mulheres que sustentam a base atual.</div></div>
+      <div class="card oliva"><div class="ck">Prioridade estratégica</div><div class="ct">Qualificação e conversão acima de volume</div><div class="cd">Nenhuma iniciativa do trimestre se justifica por alcance. Todas se justificam por conversa iniciada, visita ou matrícula.</div></div>
+    </div>
+  </div>
+
+  <div class="divisor"></div>
+
+  <!-- 02 DIAGNÓSTICO -->
+  <div class="sect">
+    <div class="kicker">02 · Contexto e diagnóstico</div>
+    <div class="sect-h">O que os dados e a operação nos <em>dizem.</em></div>
+    <div class="grid g2">
+      <div class="card"><div class="ck">Forças</div><div class="cd">Desejo e pertencimento comprovados (collabs orgânicas e espontâneas). Arquitetura sensorial reconhecida. Satisfação alta dos membros. Funil digital 100% mapeado, com dados mês a mês. Engajamento em novo patamar desde julho.</div></div>
+      <div class="card"><div class="ck">Fragilidades</div><div class="cd">Percepção superficial (lugar lindo, viés feminino, lida como academia). Comunicação ancorada em estrutura e modalidades, não em benefício. Funil comercial com perdas graves (contatos sem resposta, fechamento baixo na visita). Preço percebido distorcido por terceiros. Velocidade de execução aquém do necessário.</div></div>
+      <div class="card"><div class="ck">Oportunidades</div><div class="cd">Território autoral da longevidade saudável em Florianópolis. Comunidade disposta a criar e indicar. Canais internos da casa (TVs, espelhos, balcão) subutilizados. Novo portfólio de serviços de saúde em construção (nutrição, médico do esporte, avaliação metabólica). Alta temporada para quem está preocupado com o verão.</div></div>
+      <div class="card"><div class="ck">Ameaças</div><div class="cd">Reduzir demais o topo e secar a agenda de visitas em 60 a 90 dias. Reposicionar rápido demais e transparecer fragilidade de marca. Conteúdo de terceiros fora de controle (caso do vídeo com preço errado). Percepção de exclusão na comunidade ao restringir conteúdo.</div></div>
+    </div>
+    <div class="grid g3" style="margin-top:14px">
+      <div class="card"><div class="ck">Aprendizado 1</div><div class="ct">Qualificação funciona</div><div class="cd">Preços no site derrubaram cliques e dobraram as taxas de mensagem e de visita. Quem chega, chega pronto.</div></div>
+      <div class="card"><div class="ck">Aprendizado 2</div><div class="ct">Gente converte, estrutura atrai</div><div class="cd">O institucional abre a porta, mas é o rosto de dentro (professor, membro) que gera identificação e conversa.</div></div>
+      <div class="card"><div class="ck">Aprendizado 3</div><div class="ct">O vazamento é comercial</div><div class="cd">As maiores perdas do funil estão entre o contato e a visita e entre a visita e o fechamento, não no topo.</div></div>
+    </div>
+    <div class="card" style="margin-top:14px"><div class="ck">Dados que ainda faltam</div><div class="cd">Origem estratificada das visitas ao balcão (digital, indicação, espontânea), estratificação de seguidores e leads por município, churn e motivos de cancelamento dos 21 contratos, e aderência dos membros aos créditos de convite. Sem esses dados, parte das metas será calibrada no fechamento de outubro.</div></div>
+  </div>
+
+  <div class="divisor"></div>
+
+  <!-- 03 DESAFIOS -->
+  <div class="sect">
+    <div class="kicker">03 · Desafios de comunicação</div>
+    <div class="sect-h">Quatro deslocamentos de <em>percepção.</em></div>
+    <div class="grid g2">
+      <div class="card"><div class="ck">Desafio 1</div><div class="ct">De "lugar lindo" para casa de longevidade</div><div class="cd">Apesar da visibilidade, a marca é percebida pela estética da estrutura. Isso atrai curiosos e turistas, não decisões de saúde. O desafio é deslocar a percepção de espaço bonito para casa onde saúde física e mental se pratica como estilo de vida.</div></div>
+      <div class="card"><div class="ck">Desafio 2</div><div class="ct">De visibilidade para escassez</div><div class="cd">O volume de publicações e influenciadores gerou alcance sem gerar percepção de exclusividade. O desafio é comunicar menos e valer mais, transformando privacidade e pertencimento em ativos percebidos da marca.</div></div>
+      <div class="card"><div class="ck">Desafio 3</div><div class="ct">De marca feminina para marca de saúde para todos</div><div class="cd">A casa é lida como "academia para mulher", afastando o público masculino ou "fora do padrão". O desafio é reequilibrar com performance, ciência e âncoras de autoridade, sem perder a base feminina que sustenta a operação.</div></div>
+      <div class="card"><div class="ck">Desafio 4</div><div class="ct">De funil que gera para funil que fecha</div><div class="cd">O marketing entrega contatos qualificados que a operação não converte na velocidade necessária. O desafio é integrar comunicação e comercial em uma única jornada, com dono, prazo e mensagem definidos em cada etapa.</div></div>
+    </div>
+  </div>
+
+  <div class="divisor"></div>
+
+  <!-- 04 OBJETIVOS -->
+  <div class="sect">
+    <div class="kicker">04 · Objetivos</div>
+    <div class="sect-h">O que o trimestre precisa <em>entregar.</em></div>
+    <div class="grid g2">
+      <div class="card dark"><div class="ck">Negócio</div><div class="cd">Melhorar o fluxo operacional, marketing e comercial, reduzir cancelamentos e sustentar o reposicionamento de valor da oferta. Metas de membros a validar com a liderança na reunião.</div></div>
+      <div class="card dark"><div class="ck">Marketing</div><div class="cd">Aumentar visitas qualificadas por semana, elevar as taxas de conversão em cada etapa do funil e ativar a base de membros como canal de aquisição.</div></div>
+      <div class="card dark"><div class="ck">Comunicação</div><div class="cd">Deslocar a percepção para longevidade saudável, construir escassez e reequilibrar o apelo entre públicos feminino e masculino, 60+ e esportista.</div></div>
+      <div class="card dark"><div class="ck">Comercial</div><div class="cd">Atender 100% dos contatos gerados, acompanhar diariamente os contatos prioritários qualificados com taxa de conversão em 80%, dominar o funil completo no CRM, tratar a visita como momento de fechamento (oferta única na hora) e recuperar a base de oportunidades já geradas com régua ativa de acompanhamento.</div></div>
+    </div>
+    <div class="tblwrap"><div class="tblscroll"><table>
+      <thead><tr><th>Função</th><th>Objetivo mensurável</th><th>Hoje</th><th>Meta dezembro</th></tr></thead>
+      <tbody>
+        <tr><td><b>Posicionamento</b></td><td>Conteúdo de benefício e saúde no calendário editorial</td><td>minoria</td><td>ao menos 50% do calendário</td></tr>
+        <tr><td><b>Consideração</b></td><td>Contatos que viram visita agendada</td><td>17,5%</td><td>30%</td></tr>
+        <tr><td><b>Conversão</b></td><td>Visitas que fecham matrícula</td><td>22%</td><td>30%</td></tr>
+        <tr><td><b>Aquisição</b></td><td>Visitas qualificadas por semana</td><td>~22</td><td>40</td></tr>
+        <tr><td><b>Relacionamento</b></td><td>Membros que indicaram ao menos 1 pessoa no trimestre</td><td>não medido</td><td>1 a cada 2 membros</td></tr>
+        <tr><td><b>Relevância</b></td><td>Participação masculina nos novos leads</td><td>minoria</td><td>40%</td></tr>
+        <tr><td><b>Reputação</b></td><td>Conteúdos editoriais com validação de especialista publicados</td><td>0</td><td>1 por mês (Journal, Insights, Kitchen)</td></tr>
+        
+        
+        
+      </tbody>
+    </table></div></div>
+  </div>
+
+  <div class="divisor"></div>
+
+  <!-- 05 PÚBLICOS -->
+  <div class="sect">
+    <div class="kicker">05 · Públicos prioritários</div>
+    <div class="sect-h">Para quem a comunicação <em>trabalha.</em></div>
+    <div class="tblwrap"><div class="tblscroll"><table>
+      <thead><tr><th>Público</th><th>Quem é</th><th>Barreira atual</th><th>O que deve pensar e sentir</th><th>O que deve fazer</th><th>Canais</th></tr></thead>
+      <tbody>
+        <tr><td><b>Membros atuais</b><br>(público nº 1 do trimestre)</td><td>Membros satisfeitos, alta frequência, orgulho de pertencer</td><td>Não sabem dos benefícios que já têm (convites, aniversário) e não são ativados como embaixadores</td><td>"Fazer parte da AVVA diz algo sobre mim, e trazer alguém é estender esse círculo"</td><td>Indicar, participar dos eventos, criar conteúdo dentro das diretrizes</td><td>Canais internos da casa, Close Friends, WhatsApp, eventos</td></tr>
+        <tr><td><b>Potenciais membros</b></td><td>Homens e mulheres 30 a 55, alta renda, Floripa e região, que levam a própria saúde a sério</td><td>Percebem beleza, não benefício. Homens leem como feminina. Preço distorcido por terceiros</td><td>"É a casa mais completa de saúde e longevidade da cidade, e entrar nela é um investimento em mim"</td><td>Agendar uma visita</td><td>Instagram, site, WhatsApp, indicação de membros</td></tr>
+        <tr><td><b>Âncoras de autoridade</b></td><td>Médicos, especialistas, atletas e ex-atletas com credibilidade em saúde e performance</td><td>Sem programa estruturado de relacionamento</td><td>"A AVVA é o lugar sério de longevidade, quero associar meu nome"</td><td>Assinar conteúdos, participar de experiências, validar o Journal</td><td>Relacionamento direto, eventos, editorial</td></tr>
+        <tr><td><b>Equipe e professores</b></td><td>33 colaboradores, rostos reais da marca</td><td>Distantes da produção de conteúdo, sem pauta nem agenda</td><td>"Eu sou a AVVA e minha voz constrói a marca"</td><td>Gravar pautas de benefício com agenda definida</td><td>Produção interna coordenada (Helo, lista de pautas)</td></tr>
+        <tr><td><b>Imprensa e parceiros</b></td><td>Veículos locais e nacionais de saúde, negócios e lifestyle, marcas parceiras premium</td><td>Marca pautada como "academia bonita"</td><td>"A AVVA é a referência brasileira em wellness e longevidade"</td><td>Pautar a AVVA pelo território da saúde</td><td>PR dirigido, dados do AVVA Insights</td></tr>
+      </tbody>
+    </table></div></div>
+  </div>
+
+  <div class="divisor"></div>
+
+  <!-- 06 POSICIONAMENTO -->
+  <div class="sect">
+    <div class="kicker">06 · Posicionamento e plataforma de mensagens</div>
+    <div class="sect-h">O que a AVVA passa a <em>dizer.</em></div>
+    <div class="panel">
+      <div class="pk">Mensagem-mãe</div>
+      <div class="pt">Estilo de vida é a medicina da longevidade. A AVVA é a casa onde ele se pratica.</div>
+      <div class="pd">Percepção desejada, a casa de saúde e longevidade mais exclusiva do sul do Brasil. Nunca academia, sempre Wellness House. A categoria é repetida em toda comunicação, própria e de terceiros, via guideline.</div>
+    </div>
+    <div class="grid g2" style="margin-top:14px">
+      <div class="card"><div class="ck">Mensagens secundárias</div><div class="cd">1. Saúde física e mental integradas, com jornada acompanhada de perto (AVVA Map, nutrição, médico do esporte, concierge de saúde).<br>2. Um círculo privado, não uma audiência. Privacidade é parte da experiência.<br>3. Para homens e mulheres que decidiram envelhecer com saúde, força e lucidez.<br>4. Entrar na AVVA começa com um convite ou uma visita, e a visita é uma experiência em si.</div></div>
+      <div class="card"><div class="ck">Provas que sustentam</div><div class="cd">Portfólio de saúde em expansão (avaliação metabólica, calorimetria, VO2, fisioterapia, mentoria de propósito). Professores e especialistas com nome e rosto. Conteúdo editorial validado por médicos. Satisfação e permanência dos membros. Frequência média alta, a casa como hábito e não como obrigação.</div></div>
+      <div class="card"><div class="ck">Territórios a ocupar</div><div class="cd">Longevidade saudável, prevenção, saúde mental, performance e ciência do movimento, rituais e comunidade, arte e cultura do bem viver.</div></div>
+      <div class="card"><div class="ck">Territórios a evitar</div><div class="cd">Fitness estético, corpo como vitrine, "academia", tour de estrutura sem contexto de benefício, humor de tendência desconectado da marca, exposição de alunos sem consentimento.</div></div>
+    </div>
+    <div class="card" style="margin-top:14px"><div class="ck">Tom de voz</div><div class="cd">Sóbrio, preciso e acolhedor. Fala de ciência com simplicidade e de rotina com profundidade. Menos adjetivos sobre o espaço, mais evidência sobre a vida de quem o vive. A estética continua impecável, mas passa a ser o cenário da mensagem, nunca a mensagem.</div></div>
+  </div>
+
+  <div class="divisor"></div>
+
+  <!-- 07 ESTRATÉGIA -->
+  <div class="sect">
+    <div class="kicker">07 · Estratégia de comunicação</div>
+    <div class="sect-h">Cinco frentes que executam os <em>movimentos.</em></div>
+    <div class="tblwrap"><div class="tblscroll"><table>
+      <thead><tr><th>Frente</th><th>Problema que resolve</th><th>Estratégia</th><th>Principais iniciativas</th><th>KPI</th></tr></thead>
+      <tbody>
+        <tr><td><b>1 · Longevidade em pauta</b><br><span style="font-size:11px;color:var(--sub)">conteúdo e autoridade</span></td><td>Percepção superficial, ancorada em estética</td><td>Todo o calendário reorganizado em torno de benefício, com professores e especialistas como vozes e validação médica nos editoriais</td><td>Pautas quinzenais com professores (lista de temas da área técnica), série de benefícios por modalidade, AVVA Journal impresso com assinatura de especialistas, AVVA Insights, AVVA Kitchen reestruturado</td><td>% de conteúdo de benefício, crescimento de leads masculinos, salvamentos e compartilhamentos</td></tr>
+        <tr><td><b>2 · Círculo AVVA</b><br><span style="font-size:11px;color:var(--sub)">comunidade e relacionamento</span></td><td>O melhor vetor de conversão (membros) está desativado</td><td>A comunidade vira canal, com comunicação dedicada dentro da casa e um programa de indicação com identidade própria</td><td>Programa O Convite (crédito mensal de convite de cada membro, com nome, arte e régua), aniversário na AVVA, Close Friends da comunidade, Healthy Hour, desafios internos, comunicação nas TVs, mini-units e telas de cardio</td><td>Indicações por membro, conversão de convidados, adesão aos eventos internos</td></tr>
+        <tr><td><b>3 · Santuário</b><br><span style="font-size:11px;color:var(--sub)">escassez e privacidade</span></td><td>Visibilidade sem exclusividade</td><td>Encerrar permuta com influenciadores, restringir produção de conteúdo a membros com manual, e transformar privacidade em narrativa de marca</td><td>Guia de Boas Práticas AVVA e Guia de Produção de Conteúdo AVVA atualizados (com regra de preço divulgável e categoria Wellness House), frases de privacidade nos espelhos, cláusula de conteúdo em contratos de experiências, curadoria já em vigor nos stories (público somente o estratégico, repostagem diversa da comunidade só no Close Friends)</td><td>Incidentes de conteúdo fora da diretriz, percepção de exclusividade (pesquisa com leads), qualidade dos repostes</td></tr>
+        <tr><td><b>4 · Máquina de conversão</b><br><span style="font-size:11px;color:var(--sub)">aquisição e conversão</span></td><td>Funil que gera e perde</td><td>Comunicação e comercial integrados em uma jornada única, com SLA, mensagens padronizadas e a visita tratada como produto</td><td>Primeira resposta em minutos com duas opções de horário, régua de 24h e 72h, roteiro de visita com oferta única de fechamento, régua pós-visita com gatilhos reais, força-tarefa contínua na base de contatos via CRM, página de planos com preço de entrada claro</td><td>Taxas contato→visita e visita→matrícula, tempo de resposta, matrículas por origem</td></tr>
+        <tr><td><b>5 · Casa aberta ao mundo certo</b><br><span style="font-size:11px;color:var(--sub)">PR, âncoras e parcerias</span></td><td>Marca lida como feminina e local</td><td>Substituir influência por autoridade, com convidados escolhidos por credibilidade em saúde e esporte, e PR pautando longevidade</td><td>Programa Convidados de Autoridade (critério escrito, aprovação prévia, sem obrigação de post), matéria NSC no ar e desdobramentos, relacionamento com médicos do esporte, parceiros premium (Technogym, vinícolas, clubes)</td><td>Pautas publicadas no território de saúde, âncoras ativadas, leads masculinos</td></tr>
+      </tbody>
+    </table></div></div>
+  </div>
+
+  <div class="divisor"></div>
+
+  <!-- 08 EDITORIAL -->
+  <div class="sect">
+    <div class="kicker">08 · Arquitetura editorial</div>
+    <div class="sect-h">Conteúdo com <em>função.</em></div>
+    <div class="tblwrap"><div class="tblscroll"><table>
+      <thead><tr><th>Território</th><th>Papel estratégico</th><th>Formatos</th><th>Funil</th><th>Peso</th></tr></thead>
+      <tbody>
+        <tr class="hl"><td><b>Benefício e ciência</b></td><td>Deslocar a percepção para saúde e longevidade. Professores e especialistas explicam o que cada prática faz pelo corpo e pela mente</td><td>Reels com professores (1 tomada, autêntico), carrosséis educativos, pílulas de especialistas</td><td>Meio</td><td>40%</td></tr>
+        <tr><td><b>Casa e rotina</b></td><td>Manter a porta de descoberta com o que já funciona (cortes institucionais, arquitetura), agora sempre amarrado a um benefício</td><td>Cortes de vídeo com narração, fotografia de rotina</td><td>Topo</td><td>20%</td></tr>
+        <tr><td><b>Círculo e pertencimento</b></td><td>Mostrar a comunidade vivendo a casa, com consentimento e curadoria. Alimenta desejo de pertencer</td><td>Stories diários, repostes curados, coberturas de eventos internos, aniversários</td><td>Meio e fundo</td><td>20%</td></tr>
+        <tr><td><b>Editorial de autoridade</b></td><td>Construir reputação de longo prazo no território da saúde</td><td>AVVA Journal, AVVA Insights, AVVA Kitchen, entrevistas validadas por especialistas</td><td>Marca</td><td>10%</td></tr>
+        <tr><td><b>Conversão direta</b></td><td>Transformar atenção em visita, com chamadas de agendar visita e comunicação clara de planos</td><td>Stories com link rastreado, destaques de planos, respostas padronizadas</td><td>Fundo</td><td>10%</td></tr>
+      </tbody>
+    </table></div></div>
+    <div class="card" style="margin-top:14px"><div class="ck">Regra de ouro do calendário</div><div class="cd">Nenhum conteúdo entra no ciclo sem responder "qual benefício isso comunica e qual ação isso pede". A frequência total de publicações pode cair. O valor por publicação precisa subir.</div></div>
+  </div>
+
+  <div class="divisor"></div>
+
+  <!-- 09 CANAIS -->
+  <div class="sect">
+    <div class="kicker">09 · Estratégia de canais</div>
+    <div class="sect-h">Cada canal com um <em>papel.</em></div>
+    <div class="tblwrap"><div class="tblscroll"><table>
+      <thead><tr><th></th><th>Canal</th><th>Papel estratégico</th><th>CTA</th><th>KPI principal</th></tr></thead>
+      <tbody>
+        <tr><td rowspan="5" style="font-weight:800;color:var(--oliva)">OWNED</td><td><b>Instagram @avvahouse</b></td><td>Vitrine curada do território de longevidade. Menos volume, mais benefício. Repost integral migra para Close Friends</td><td>Agendar visita</td><td>Visitas geradas, leads qualificados</td></tr>
+        <tr><td><b>Canais internos da casa</b><br>TVs, mini-units, telas de cardio, espelhos, balcão</td><td>Canal de primeira linha do trimestre. Comunicam O Convite, aniversário, eventos, Healthy Hour e as frases de privacidade</td><td>Use seu convite</td><td>Adesão de membros aos programas</td></tr>
+        <tr><td><b>WhatsApp e direct</b></td><td>Motor de conversão, com SLA de resposta, mensagens por plano de interesse e links rastreados</td><td>Escolher horário de visita</td><td>Tempo de resposta, contato→visita</td></tr>
+        <tr><td><b>Site</b></td><td>Prova e qualificação, com preço de entrada claro para eliminar a distorção de percepção</td><td>Formulário e agendamento</td><td>Formulários, visitas originadas</td></tr>
+        <tr><td><b>AVVA Journal impresso</b></td><td>Objeto de marca dentro da casa e em parceiros selecionados, materializa a autoridade em saúde</td><td>Viver a casa</td><td>Edições publicadas, citações</td></tr>
+        <tr><td rowspan="3" style="font-weight:800;color:var(--oliva)">EARNED</td><td><b>Membros</b></td><td>O principal canal de aquisição do trimestre, via O Convite e conteúdo espontâneo dentro das diretrizes</td><td>Traga alguém do seu círculo</td><td>Indicações e conversão de convidados</td></tr>
+        <tr><td><b>Imprensa</b></td><td>Pautar longevidade e o modelo Wellness House, com dados próprios do AVVA Insights</td><td>·</td><td>Pautas no território certo</td></tr>
+        <tr><td><b>Convidados de autoridade</b></td><td>Substituem influenciadores. Médicos, atletas e especialistas, por critério escrito e aprovação prévia</td><td>·</td><td>Âncoras ativadas, leads masculinos</td></tr>
+        <tr><td rowspan="2" style="font-weight:800;color:var(--oliva)">PAID</td><td><b>Performance local</b></td><td>Somente fundo de funil, raio geográfico definido, criativos de benefício e visita. Zero mídia de volume</td><td>Agendar visita</td><td>Custo por visita agendada</td></tr>
+        <tr><td><b>Remarketing</b></td><td>Reaquecer a base de contatos e visitantes do site com provas e convite à visita</td><td>Voltar a conversar</td><td>Matrículas recuperadas</td></tr>
+      </tbody>
+    </table></div></div>
+  </div>
+
+  <div class="divisor"></div>
+
+  <!-- 10 CAMPANHAS -->
+  <div class="sect">
+    <div class="kicker">10 · Campanhas e grandes movimentos</div>
+    <div class="sect-h">Os marcos do <em>trimestre.</em></div>
+    <div class="tblwrap"><div class="tblscroll"><table>
+      <thead><tr><th>Movimento</th><th>Tipo</th><th>Período</th><th>Conceito</th><th>KPI</th></tr></thead>
+      <tbody>
+        <tr class="hl"><td><b>Virada de território</b></td><td>Reposicionamento</td><td>Outubro</td><td>O novo ciclo editorial estreia o território da longevidade, com manifesto, série de professores e a casa apresentada pelo que ela faz, não pelo que ela é</td><td>% conteúdo de benefício, percepção</td></tr>
+        <tr class="hl"><td><b>O Convite</b></td><td>Campanha proprietária, always on</td><td>Outubro a dezembro</td><td>Cada membro tem, todo mês, um convite para trazer alguém do seu círculo. Comunicado dentro da casa e no Close Friends, nunca como promoção pública</td><td>Indicações, conversão de convidados</td></tr>
+        <tr><td><b>Aniversário na AVVA</b></td><td>Always on</td><td>Contínuo</td><td>Aula temática especial e celebração do B Day de membros, com convidados do círculo pessoal</td><td>Adesão, convidados por evento</td></tr>
+        <tr><td><b>Agenda do Círculo</b></td><td>Eventos de membros</td><td>Mensal</td><td>Healthy Hour semanal, experiências coletivas (meditação, breathwork), desafios internos, BALAVVA trimestral, agenda outdoor, concertos. A comunicação empacota a agenda do mês como um benefício de pertencer</td><td>Presenças, novos membros por evento</td></tr>
+        <tr><td><b>Yoga Break Festival</b></td><td>Ativação de marca</td><td>Novembro</td><td>Ativação de marca em produção, integrada à narrativa de saúde e comunidade</td><td>Presenças, leads qualificados</td></tr>
+        <tr><td><b>Verão de longevidade</b></td><td>Sazonal</td><td>Dezembro</td><td>Alta temporada de Floripa com oferta de experiências para visitantes qualificados e captação para janeiro, o mês mais forte do setor</td><td>Visitas, matrículas de janeiro</td></tr>
+      </tbody>
+    </table></div></div>
+  </div>
+
+  <div class="divisor"></div>
+
+  <!-- 11 PR / 12 MÍDIA -->
+  <div class="sect">
+    <div class="kicker">11 · PR e influência &nbsp;·&nbsp; 12 · Mídia</div>
+    <div class="sect-h">Reputação e <em>investimento.</em></div>
+    <div class="grid g2">
+      <div class="card"><div class="ck">O que queremos que o mercado diga</div><div class="cd">"A AVVA criou no Brasil o modelo de Wellness House, onde longevidade é estilo de vida". Narrativas prioritárias, Floripa como capital brasileira da longevidade, o novo luxo é privacidade, estilo de vida como medicina. Pautas sustentadas por dados do AVVA Insights e assinadas por especialistas. Veículos alvo, imprensa local (NSC já encaminhada), negócios e lifestyle nacional, e veículos de público masculino para a frente de performance.</div></div>
+      <div class="card"><div class="ck">Política de influência (substitui a permuta)</div><div class="cd">Contratos e permutas com influenciadores encerrados. Entra o programa Convidados de Autoridade, com critério escrito (credibilidade em saúde, esporte ou ciência, público maduro), aprovação prévia da liderança, experiência oferecida sem obrigação de post e diretrizes claras de imagem, preço e categoria. Máximo de dois convidados por mês.</div></div>
+      <div class="card"><div class="ck">Papel da mídia paga</div><div class="cd">Sem mídia de volume no trimestre. Investimento concentrado em fundo de funil, raio geográfico da casa, com criativos de benefício e visita, e remarketing sobre a base de contatos e visitantes do site. Distribuição sugerida, 70% aquisição local de visitas e 30% remarketing. Valores definidos com a liderança.</div></div>
+      <div class="card"><div class="ck">Métricas de mídia</div><div class="cd">Custo por visita agendada como métrica central, custo por lead como secundária. Alcance e impressões deixam de ser reportados como resultado, viram contexto.</div></div>
+    </div>
+  </div>
+
+  <div class="divisor"></div>
+
+  <!-- 13 CALENDÁRIO MACRO -->
+  <div class="sect">
+    <div class="kicker">13 · Calendário macro</div>
+    <div class="sect-h">Prioridades mês a <em>mês.</em></div>
+    <div class="tblwrap"><div class="tblscroll"><table>
+      <thead><tr><th>Frente</th><th>Setembro · transição</th><th>Outubro</th><th>Novembro</th><th>Dezembro</th></tr></thead>
+      <tbody>
+        <tr><td><b>Marca e território</b></td><td>Guideline e manual v2, frases de privacidade</td><td>Virada de território no ar, manifesto</td><td>Consolidação, pesquisa de percepção</td><td>Narrativa de verão e longevidade, Calendário Macro 2027</td></tr>
+        <tr><td><b>Conteúdo</b></td><td>Lista de pautas com professores, materiais represados no ar</td><td>Novo mix editorial 40/20/20/10/10</td><td>Série masculina e de performance</td><td>Retrospectiva de resultados de membros</td></tr>
+        <tr><td><b>Comunidade</b></td><td>Close Friends ativo, base completada pela Heloísa</td><td>Lançamento de O Convite e aniversários</td><td>Healthy Hour consolidado, desafios internos, ativação YBF</td><td>BALAVVA e agenda de verão</td></tr>
+        <tr><td><b>Conversão</b></td><td>SLA e mensagens padronizadas, força-tarefa na base</td><td>Roteiro de visita com oferta única</td><td>Régua pós-visita madura</td><td>Campanha de captação para janeiro</td></tr>
+        <tr><td><b>PR e âncoras</b></td><td>Matéria NSC, critério de convidados aprovado</td><td>Primeiro convidado de autoridade</td><td>Pauta nacional de longevidade</td><td>Balanço do ano para imprensa</td></tr>
+        <tr><td><b>Editorial</b></td><td>Journal fechado (entrevista pendente)</td><td>Journal impresso lançado</td><td>AVVA Insights no ar</td><td>AVVA Kitchen reestruturado</td></tr>
+        <tr><td><b>Mídia</b></td><td>Pausa de campanhas fora da diretriz</td><td>Performance local de visitas</td><td>Otimização por custo por visita</td><td>Reforço de temporada</td></tr>
+      </tbody>
+    </table></div></div>
+  </div>
+
+  <div class="divisor"></div>
+
+  <!-- 14 OPERACIONAL -->
+  <div class="sect">
+    <div class="kicker">14 · Plano operacional · primeiros 15 dias</div>
+    <div class="sect-h">O que sai do papel <em>agora.</em></div>
+    <div class="tblwrap"><div class="tblscroll"><table>
+      <thead><tr><th>Ação</th><th>Responsável</th><th>Prazo</th></tr></thead>
+      <tbody>
+        <tr><td>Pausar campanhas e comunicações fora da nova diretriz (feito para AVVA Day Duo)</td><td>Badauê</td><td>Concluído</td></tr>
+        <tr class="hl"><td>Ajustes do Ciclo 6 e desenvolvimento das pautas do Ciclo 7, para direcionar a captação</td><td>Badauê</td><td>Prioridade da semana</td></tr>
+        <tr class="hl"><td>Plano de ação do 4º trimestre detalhado por frente</td><td>Badauê</td><td>Prioridade da semana</td></tr>
+        <tr><td>Comunicar encerramento dos contratos e permutas de influência</td><td>AVVA (liderança) com apoio Badauê</td><td>Semana 1</td></tr>
+        <tr><td>Atualizar o Guia de Boas Práticas AVVA e o Guia de Produção de Conteúdo AVVA, com regra de preço, categoria e privacidade</td><td>Badauê</td><td>Semana 1</td></tr>
+        <tr><td>Frases de privacidade para espelhos e ambientes, arte final</td><td>Badauê, aprovação AVVA</td><td>Semana 1</td></tr>
+        <tr><td>Stories filtrados e Close Friends ativo com cerca de 100 membros. Atualizar com os membros faltantes</td><td>Heloísa</td><td>Em curso</td></tr>
+        <tr><td>Identidade e mecânica do programa O Convite</td><td>Badauê, validação da liderança</td><td>Semana 2</td></tr>
+        <tr><td>Artes para TVs, mini-units e telas de cardio (O Convite, B Day, agenda)</td><td>Badauê, implantação Marco e Patricia</td><td>Semana 2</td></tr>
+        <tr><td>Lista de pautas de benefício com a área técnica e agenda de captação com professores</td><td>AVVA (Patricia e Lucas) e Badauê (Helo e Camille)</td><td>Semana 2</td></tr>
+        <tr><td>Publicar materiais represados de saúde (Diogo, Pierre) após aprovação</td><td>Badauê edita, AVVA aprova</td><td>Semana 2</td></tr>
+        <tr><td>Mensagens padronizadas por plano de interesse e SLA de resposta com a equipe comercial</td><td>Badauê e Letícia</td><td>Semana 2</td></tr>
+        <tr><td>Força-tarefa contínua na base de contatos, com mapeamento no CRM</td><td>Letícia e equipe, apoio Patricia</td><td>Contínuo</td></tr>
+        <tr><td>Preço de entrada claro no site e nos destaques, eliminando a distorção</td><td>Badauê</td><td>Semana 1</td></tr>
+      </tbody>
+    </table></div></div>
+    <div class="grid g2" style="margin-top:14px">
+      <div class="card"><div class="ck">Em produção</div><div class="cd">Ativação de marca do Yoga Break Festival em novembro. Mapeamento de perfis e marcas locais com match ao novo posicionamento, base para parcerias e convidados de autoridade.</div></div>
+      <div class="card"><div class="ck">Aguardando retorno da AVVA</div><div class="cd">Matéria NSC, AVVA Journal (entrevista pendente) e informações das obras do Sami para o QR Code. São os três destravamentos que dependem do cliente nesta semana.</div></div>
+      <div class="card"><div class="ck">A produzir na sequência</div><div class="cd">Calendário Macro de 2027, construído a partir das decisões desta reunião e entregue dentro do trimestre.</div></div>
+      <div class="card"><div class="ck">Já em vigor</div><div class="cd">Stories públicos filtrados ao que é estratégico, repostagem diversa da comunidade somente no Close Friends (cerca de 100 membros, Heloísa completa a base), campanha fora da diretriz pausada.</div></div>
+    </div>
+  </div>
+
+  <div class="divisor"></div>
+
+  <!-- 15 KPIs -->
+  <div class="sect">
+    <div class="kicker">15 · KPIs e mensuração</div>
+    <div class="sect-h">O que passa a ser <em>medido.</em></div>
+    <div class="tblwrap"><div class="tblscroll"><table>
+      <thead><tr><th>Nível</th><th>KPI</th><th>Fonte</th><th>Frequência</th></tr></thead>
+      <tbody>
+        <tr class="hl"><td><b>Estratégico</b></td><td>Matrículas por origem, visitas qualificadas por semana, taxa contato→visita, taxa visita→matrícula, indicações por membro, cancelamentos</td><td>Evo, CRM (BIA), planilha de metas</td><td>Semanal</td></tr>
+        <tr><td><b>Canal</b></td><td>Tempo de resposta, cliques rastreados por link, formulários, custo por visita agendada, adesão a eventos internos</td><td>WhatsApp, rastreadores, Meta Ads, Evo</td><td>Semanal</td></tr>
+        <tr><td><b>Campanha</b></td><td>Convites usados por mês, convidados convertidos, presenças por evento, leads masculinos</td><td>Evo, controle interno</td><td>Mensal</td></tr>
+        <tr><td><b>Saúde de marca</b></td><td>% de conteúdo de benefício, salvamentos e compartilhamentos, percepção (pesquisa curta com leads e membros)</td><td>Instagram, pesquisa</td><td>Mensal</td></tr>
+      </tbody>
+    </table></div></div>
+    <div class="card" style="margin-top:14px"><div class="ck">Métricas rebaixadas a contexto</div><div class="cd">Seguidores, alcance, visualizações e curtidas deixam de ser metas e passam a ser monitoramento de saúde do canal. Continuam no relatório mensal como contexto, mas nenhuma decisão do trimestre se justifica por elas. A meta pública do marketing passa a ser visita, matrícula e indicação.</div></div>
+  </div>
+
+  <div class="divisor"></div>
+
+  <!-- 16 GOVERNANÇA -->
+  <div class="sect">
+    <div class="kicker">16 · Governança e velocidade</div>
+    <div class="sect-h">O ritmo que o momento <em>exige.</em></div>
+    <div class="grid g2">
+      <div class="card"><div class="ck">Rotinas</div><div class="cd">Alinhamento semanal (segunda) com pauta fixa, funil da semana, conteúdo da semana, pendências dos dois lados. Fechamento mensal com o relatório de dados e revisão de estratégia. Reunião estratégica mensal com a liderança para decisões de rota.</div></div>
+      <div class="card"><div class="ck">SLA dos dois lados</div><div class="cd">Badauê entrega toda peça com prazo definido e nada fica represado por mais de uma semana. AVVA aprova ou devolve em até 48h úteis, e mudanças internas que afetam a comunicação (preços, planos, eventos) são comunicadas antes de entrar em vigor. Sem esses dois compromissos, a velocidade cobrada não acontece.</div></div>
+      <div class="card"><div class="ck">Fluxo de produção</div><div class="cd">Lista de pautas técnicas (AVVA) alimenta a agenda de captação (Helo e Camille em Floripa), edição e publicação (Badauê), com aprovação prévia da liderança para todo conteúdo do território de saúde.</div></div>
+      <div class="card"><div class="ck">Otimização</div><div class="cd">Toda semana, uma decisão baseada no funil (o que escalar, o que cortar). Todo mês, recalibragem de metas semanais como já fazemos no acompanhamento do relatório.</div></div>
+    </div>
+  </div>
+
+  <div class="divisor"></div>
+
+  <!-- 17 ROADMAP -->
+  <div class="sect">
+    <div class="kicker">17 · Roadmap</div>
+    <div class="sect-h">A trajetória do <em>trimestre.</em></div>
+    <div class="roadmap">
+      <div class="ro"><div class="rm">Setembro</div><div class="rt">Corrigir</div><div class="rd">Estancar as perdas do funil, encerrar a permuta, preparar manuais, canais internos e o novo ciclo editorial.</div></div>
+      <div class="ro"><div class="rm">Outubro</div><div class="rt">Reposicionar</div><div class="rd">Virada de território no ar, O Convite lançado, visita como produto, primeiro convidado de autoridade.</div></div>
+      <div class="ro"><div class="rm">Novembro</div><div class="rt">Aprofundar</div><div class="rd">Série masculina e de performance, editorial de autoridade rodando, régua pós-visita madura, pesquisa de percepção.</div></div>
+      <div class="ro"><div class="rm">Dezembro</div><div class="rt">Converter</div><div class="rd">Alta temporada qualificada, BALAVVA, balanço do ano e captação para janeiro, o mês mais forte do setor.</div></div>
+    </div>
+  </div>
+
+  <div class="divisor"></div>
+
+  <!-- DECISÕES -->
+  <div class="sect">
+    <div class="kicker">Pauta da reunião</div>
+    <div class="sect-h">Decisões que destravam o <em>plano.</em></div>
+    <div class="sect-d">Pontos que dependem de validação da liderança para o plano entrar em execução completa.</div>
+    <div class="decision"><span class="dtag">Meta</span><div class="dt">Meta de membros do trimestre</div><div class="dd">A proposta do marketing parte do funil real, dobrando visitas semanais e elevando as taxas de conversão. O número final de membros e a meta financeira do trimestre precisam ser definidos pela liderança para calibrarmos o acompanhamento semanal.</div></div>
+    <div class="decision"><span class="dtag">Produto</span><div class="dt">AVVA Day continua como produto pago?</div><div class="dd">Se continuar, entra com contrato incluindo cláusula de conteúdo e benefício de compra online. Se descontinuar, comunicamos como evolução do modelo de convites (O Convite absorve a função de porta de entrada).</div></div>
+    <div class="decision"><span class="dtag">Influência</span><div class="dt">Regra final dos Convidados de Autoridade</div><div class="dd">Critério escrito proposto, credibilidade em saúde, esporte ou ciência, público maduro, aprovação prévia, sem obrigação de post, máximo dois por mês. Validar critério, teto e quem aprova (sugestão, liderança AVVA + Badauê).</div></div>
+    <div class="decision"><span class="dtag">Portfólio</span><div class="dt">Sequência de lançamento dos novos serviços de saúde</div><div class="dd">Das considerações estratégicas enviadas, o que será implementado e quando, fisioterapeuta AVVA, eliminação do Personal Trio, médico do esporte, concierge de saúde, nutrição ampliada, avaliação metabólica, calorimetria e VO2. A comunicação precisa da ordem e das datas para transformar cada lançamento em prova do reposicionamento, sem anunciar o que ainda não está operacional.</div></div>
+    <div class="decision"><span class="dtag">Preço</span><div class="dt">Timing do reajuste e comunicação de valor</div><div class="dd">O plano prepara a percepção de valor antes de qualquer reajuste (provas, portfólio, escassez). Definir o momento do reajuste para sincronizar a narrativa, e validar a comunicação do preço de entrada no site e nas respostas.</div></div>
+    <div class="decision"><span class="dtag">Mídia</span><div class="dt">Verba de mídia do trimestre</div><div class="dd">O plano funciona 100% orgânico, mas performance local de visitas e remarketing aceleram a conversão. Definir se há verba e em que faixa, para dimensionarmos as campanhas de fundo de funil.</div></div>
+    <div class="decision"><span class="dtag">Calendário</span><div class="dt">Janeiro entra no plano?</div><div class="dd">Janeiro é o mês mais forte do setor e o auge da temporada em Floripa. Sugerimos estender o horizonte de planejamento até janeiro, com a campanha de captação de verão preparada em dezembro.</div></div>
+    <div class="decision"><span class="dtag">Campanhas</span><div class="dt">Manteremos as campanhas comerciais?</div><div class="dd">Definir se seguem no calendário as campanhas comerciais como o evento de troca de estação e o AVVA Experience, e em que formato elas convivem com a nova lógica de escassez e privacidade.</div></div>
+    <div class="decision"><span class="dtag">Calendário</span><div class="dt">Fechar o calendário de outubro, novembro e dezembro</div><div class="dd">Consolidar datas de eventos internos e públicos, ativação YBF em novembro, eventos corporativos nos novos horários fora do funcionamento e campanhas sazonais, para o calendário do trimestre sair fechado desta reunião.</div></div>
+  </div>
+
+  <div style="margin-top:70px;text-align:center;color:var(--sub);font-size:12px">AVVA Wellness House · Badauê · Plano de Comunicação do 4º trimestre · Setembro 2026</div>
+
+</div>
+</body>
+</html>
