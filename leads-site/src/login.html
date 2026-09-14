@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>AVVA · Acesso restrito</title>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#F4EEE5;--card:#FFFCF7;--line:#E6DCCD;--ink:#2B211A;--ink2:#65574B;--muted:#9A8C80;--brown:#655244;--crit:#9E2B2B}
+  *{box-sizing:border-box}
+  body{margin:0;min-height:100vh;display:grid;place-items:center;background:var(--bg);color:var(--ink);font:15px/1.5 Lato,"Helvetica Neue",Arial,sans-serif;padding:24px}
+  form{width:100%;max-width:380px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:32px 30px 28px;display:grid;gap:16px}
+  .logo{font-weight:900;letter-spacing:.32em;font-size:16px;color:var(--brown)}
+  h1{margin:0;font-weight:400;font-style:italic;font-size:26px;line-height:1.15}
+  p{margin:0;color:var(--ink2);font-size:14px}
+  label{display:grid;gap:6px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--ink2)}
+  input{font:inherit;font-size:15px;letter-spacing:0;text-transform:none;font-weight:400;padding:11px 13px;border-radius:10px;border:1px solid var(--line);background:#fff;color:var(--ink)}
+  input:focus,button:focus-visible{outline:2px solid var(--brown);outline-offset:1px}
+  button{font:inherit;font-weight:700;font-size:15px;padding:12px;border:0;border-radius:999px;background:var(--brown);color:#FFF9EF;cursor:pointer}
+  button[disabled]{opacity:.6;cursor:wait}
+  .erro{color:var(--crit);font-size:13px;min-height:1.2em}
+  .rodape{font-size:12px;color:var(--muted)}
+</style>
+</head>
+<body>
+<form id="f" autocomplete="on">
+  <span class="logo">AVVA</span>
+  <div style="display:grid;gap:6px">
+    <h1>Leads do site</h1>
+    <p>Acesso restrito à equipe. Entre com o usuário e a senha que você recebeu.</p>
+  </div>
+  <label>Usuário <input id="u" name="username" autocomplete="username" required></label>
+  <label>Senha <input id="s" name="password" type="password" autocomplete="current-password" required></label>
+  <div class="erro" id="erro" role="alert"></div>
+  <button id="b" type="submit">Entrar</button>
+  <span class="rodape">Os dados ficam criptografados e só abrem com as credenciais certas.</span>
+</form>
+<script id="pacote" type="application/json">__PACOTE__</script>
+<script>
+const P = JSON.parse(document.getElementById('pacote').textContent);
+const b64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
+async function abrir(usuario, senha){
+  const base = await crypto.subtle.importKey('raw', new TextEncoder().encode(usuario.trim().toLowerCase() + '\n' + senha), 'PBKDF2', false, ['deriveKey']);
+  const chave = await crypto.subtle.deriveKey({name:'PBKDF2', salt:b64(P.sal), iterations:P.iter, hash:'SHA-256'}, base, {name:'AES-GCM', length:256}, false, ['decrypt']);
+  const claro = await crypto.subtle.decrypt({name:'AES-GCM', iv:b64(P.iv)}, chave, b64(P.dados));
+  return new TextDecoder().decode(claro);
+}
+document.getElementById('f').addEventListener('submit', async e => {
+  e.preventDefault();
+  const b = document.getElementById('b'), erro = document.getElementById('erro');
+  b.disabled = true; b.textContent = 'Abrindo…'; erro.textContent = '';
+  try {
+    const html = await abrir(document.getElementById('u').value, document.getElementById('s').value);
+    document.open(); document.write(html); document.close();
+  } catch(_) {
+    erro.textContent = 'Usuário ou senha incorretos. Confira e tente de novo.';
+    b.disabled = false; b.textContent = 'Entrar';
+    document.getElementById('s').select();
+  }
+});
+</script>
+</body>
+</html>
