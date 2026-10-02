@@ -1,0 +1,540 @@
+<meta charset="utf-8">
+<title>Setembro e Outubro AVVA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;500&family=Lato:wght@400;700&display=swap">
+<style>
+:root{
+  --ground:#F4F0E8; --surface:#FFFDF9; --surface-2:#EBE2D2;
+  --ink:#3E342C; --ink-soft:#7A6B5E; --brown:#655244; --accent:#AFA380; --line:#DDD3C3;
+  --good:#4F7A4E; --good-bg:#E3EDDD; --warn:#9A6A1C; --warn-bg:#F4E7CC;
+  --bad:#A3452F; --bad-bg:#F5DDD5; --neutral-bg:#ECE6DB; --zebra:#FBF8F2;
+  --shadow:0 1px 0 rgba(101,82,68,.06),0 8px 24px -16px rgba(101,82,68,.35);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#1C1815;--surface:#26211D;--surface-2:#312A24;--ink:#EBE2D2;--ink-soft:#B3A695;
+    --brown:#D9C7B4;--accent:#C9BE9A;--line:#3B332C;
+    --good:#9CC596;--good-bg:#26361F;--warn:#E3B96B;--warn-bg:#3A2E18;--bad:#E79A86;--bad-bg:#3D2019;--neutral-bg:#322B25;--zebra:#221E1A;
+    --shadow:0 1px 0 rgba(0,0,0,.3),0 10px 26px -18px rgba(0,0,0,.8);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#1C1815;--surface:#26211D;--surface-2:#312A24;--ink:#EBE2D2;--ink-soft:#B3A695;
+  --brown:#D9C7B4;--accent:#C9BE9A;--line:#3B332C;
+  --good:#9CC596;--good-bg:#26361F;--warn:#E3B96B;--warn-bg:#3A2E18;--bad:#E79A86;--bad-bg:#3D2019;--neutral-bg:#322B25;--zebra:#221E1A;
+  --shadow:0 1px 0 rgba(0,0,0,.3),0 10px 26px -18px rgba(0,0,0,.8);
+}
+*{box-sizing:border-box}
+body{background:var(--ground);color:var(--ink);font:15px/1.5 Lato,"Helvetica Neue",Arial,sans-serif;margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:20px;padding-block:24px 56px;display:flex;flex-direction:column;gap:28px}
+h1,h2,h3{font-family:Mitr,"Trebuchet MS",sans-serif;font-weight:400;color:var(--brown);margin:0;text-wrap:balance}
+h1{font-size:30px;line-height:1.15;font-weight:500}
+h2{font-size:20px;line-height:1.2}
+h3{font-size:15px;line-height:1.3}
+p{margin:0}
+.eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);font-weight:700}
+.num{font-variant-numeric:tabular-nums}
+.soft{color:var(--ink-soft);font-size:13px}
+.soft b{color:var(--brown)}
+
+.timbre{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:14px}
+.timbre .marca{font-family:Mitr,"Trebuchet MS",sans-serif;font-weight:500;font-size:22px;letter-spacing:.16em;color:var(--brown);line-height:1}
+.timbre .assinatura{font-size:11px;line-height:1.5;text-align:right;color:var(--ink-soft)}
+.timbre .assinatura b{color:var(--ink);font-weight:700}
+.timbre .assinatura i{font-style:italic}
+
+.top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px}
+.brandline{display:flex;flex-direction:column;gap:6px}
+.sub{color:var(--ink-soft);max-width:62ch}
+.stamp{font-size:13px;color:var(--ink-soft);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 14px;white-space:nowrap}
+
+.figures{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:var(--surface);border-radius:16px;box-shadow:var(--shadow)}
+.fig{padding:18px 20px;display:flex;flex-direction:column;gap:4px;border-left:1px solid var(--line)}
+.fig:first-child{border-left:0}
+.fig .v{font-family:Mitr,"Trebuchet MS",sans-serif;font-size:30px;line-height:1.1;color:var(--brown);font-variant-numeric:tabular-nums}
+.fig .n{font-size:13px;color:var(--ink-soft)}
+@media (max-width:760px){.figures{grid-template-columns:repeat(2,minmax(0,1fr))}.fig:nth-child(3){border-left:0}.fig:nth-child(n+3){border-top:1px solid var(--line)}}
+
+section{display:flex;flex-direction:column;gap:14px}
+.sechead{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px}
+.sechead p{color:var(--ink-soft);font-size:14px}
+
+.tablewrap{overflow-x:auto;background:var(--surface);border-radius:16px;box-shadow:var(--shadow);-webkit-overflow-scrolling:touch}
+table{border-collapse:separate;border-spacing:0;width:100%;min-width:560px;font-size:14px}
+caption{text-align:left;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);font-weight:700;padding:16px 16px 4px}
+th,td{padding:12px 16px;text-align:right;vertical-align:top;font-variant-numeric:tabular-nums}
+td{border-top:1px solid var(--line)}
+th:first-child,td:first-child{text-align:left;max-width:300px}
+th:last-child,td:last-child{text-align:left}
+th{position:sticky;top:0;z-index:1;background:var(--surface);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);font-weight:700;border-bottom:1px solid var(--line);white-space:nowrap}
+tbody tr:nth-child(even) td{background:var(--zebra)}
+tbody tr:hover td{background:var(--surface-2)}
+tbody td:first-child{font-weight:700;color:var(--ink)}
+tbody td:first-child .soft{font-weight:400}
+tfoot td{border-top:2px solid var(--line);background:var(--surface-2);font-weight:700;color:var(--brown)}
+.cell{display:flex;flex-direction:column;align-items:flex-end;gap:5px}
+.bar{display:block;width:100%;max-width:120px;height:5px;border-radius:3px;background:var(--surface-2);overflow:hidden}
+tbody tr:nth-child(even) .bar{background:var(--surface)}
+.bar i{display:block;height:100%;background:var(--accent);border-radius:3px}
+.bar.forte i{background:var(--brown)}
+td .obs{display:block;font-weight:400;color:var(--ink-soft);font-size:12.5px;line-height:1.4;margin-top:2px}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;border-radius:999px;padding:3px 10px;white-space:nowrap}
+.chip::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.chip.good{background:var(--good-bg);color:var(--good)}
+.chip.warn{background:var(--warn-bg);color:var(--warn)}
+.chip.bad{background:var(--bad-bg);color:var(--bad)}
+.chip.neutral{background:var(--neutral-bg);color:var(--ink-soft)}
+.chip.novo{background:var(--surface-2);color:var(--brown)}
+
+.destaque{background:var(--brown);color:var(--surface);border-radius:16px;box-shadow:var(--shadow);padding:22px 24px;display:grid;grid-template-columns:minmax(200px,.9fr) minmax(0,2fr);gap:22px;align-items:center}
+.destaque .big{display:flex;flex-direction:column;gap:2px}
+.destaque .big .v{font-family:Mitr,"Trebuchet MS",sans-serif;font-size:62px;line-height:1;font-variant-numeric:tabular-nums}
+.destaque .big .k{font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.75;font-weight:700}
+.destaque .apoio{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.destaque .apoio div{display:flex;flex-direction:column;gap:3px}
+.destaque .apoio .n{font-family:Mitr,"Trebuchet MS",sans-serif;font-size:22px;line-height:1.1;font-variant-numeric:tabular-nums}
+.destaque .apoio .t{font-size:12.5px;line-height:1.35;opacity:.8}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .destaque{color:#1C1815}}
+:root[data-theme="dark"] .destaque{color:#1C1815}
+@media (max-width:720px){.destaque{grid-template-columns:1fr;gap:16px}.destaque .apoio{grid-template-columns:1fr 1fr}.destaque .big .v{font-size:52px}}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.card{background:var(--surface);border-radius:14px;box-shadow:var(--shadow);padding:16px 18px;display:flex;flex-direction:column;gap:8px}
+.card .k{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);font-weight:700}
+.card p{font-size:14px;color:var(--ink)}
+.card .dado{font-family:Mitr,"Trebuchet MS",sans-serif;font-size:21px;color:var(--brown);font-variant-numeric:tabular-nums;line-height:1.1}
+@media (max-width:860px){.cards{grid-template-columns:1fr}}
+
+.plano{background:var(--surface);border-radius:16px;box-shadow:var(--shadow);display:grid;grid-template-columns:minmax(240px,.85fr) minmax(0,2.15fr)}
+.planototal{padding:20px;display:flex;flex-direction:column;gap:6px;border-right:1px solid var(--line)}
+.planototal .mv{font-family:Mitr,"Trebuchet MS",sans-serif;font-size:38px;line-height:1.1;color:var(--brown)}
+.objsplit{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+.objsplit .row{display:flex;flex-direction:column;gap:4px;font-size:13px}
+.objsplit .lab{display:flex;justify-content:space-between;gap:8px}
+.objsplit .track{height:6px;border-radius:3px;background:var(--surface-2);overflow:hidden}
+.objsplit .fill{height:100%;background:var(--accent);border-radius:3px}
+.tablewrap.flat{box-shadow:none;border-radius:0 16px 16px 0;background:transparent}
+@media (max-width:820px){.plano{grid-template-columns:1fr}.planototal{border-right:0;border-bottom:1px solid var(--line)}.tablewrap.flat{border-radius:0 0 16px 16px}}
+
+.publicos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.pub{background:var(--surface);border-radius:14px;box-shadow:var(--shadow);padding:18px 20px;display:flex;flex-direction:column;gap:8px}
+.pub header{display:flex;gap:8px;flex-wrap:wrap}
+.pub h3{color:var(--brown);font-size:17px;line-height:1.25}
+.pub p{font-size:14px}
+.pub .quem{color:var(--ink)}
+.pub .obj{color:var(--ink);background:var(--surface-2);border-radius:10px;padding:10px 12px}
+.pub .obj b,.pub .tec b{color:var(--brown)}
+.pub .tec{font-size:12px;color:var(--ink-soft);line-height:1.45}
+@media (max-width:860px){.publicos{grid-template-columns:1fr}}
+
+.prontos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;align-items:start}
+.pronto{background:var(--surface);border-radius:14px;box-shadow:var(--shadow);padding:12px;display:flex;flex-direction:column;gap:8px}
+.pronto video{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:10px;background:#000;display:block}
+.pronto .meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;justify-content:space-between;min-height:24px}
+.pronto h3{color:var(--brown);font-size:14px;line-height:1.25}
+.pronto p{font-size:12px;line-height:1.45;color:var(--ink-soft)}
+@media (max-width:900px){.prontos{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.prontos{grid-template-columns:1fr}.pronto video{max-height:420px}}
+.criativos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.cri{background:var(--surface);border-radius:14px;box-shadow:var(--shadow);padding:16px 18px;display:flex;flex-direction:column;gap:6px}
+.cri .n{font-size:11px;color:var(--ink-soft);font-weight:700;letter-spacing:.1em}
+.cri h3{color:var(--ink);font-family:Lato,sans-serif;font-weight:700;font-size:15px}
+.cri .fala{font-size:14px;color:var(--brown);font-style:italic}
+.cri .onde{font-size:12px;color:var(--ink-soft)}
+@media (max-width:860px){.criativos{grid-template-columns:1fr}}
+
+.linha{background:var(--surface);border-radius:16px;box-shadow:var(--shadow);overflow:hidden}
+.etapa{display:grid;grid-template-columns:120px minmax(0,1fr);gap:16px;padding:13px 18px;border-bottom:1px solid var(--line);font-size:14px}
+.etapa:last-child{border-bottom:0}
+.etapa .quando{color:var(--brown);font-weight:700}
+@media (max-width:560px){.etapa{grid-template-columns:1fr;gap:3px}}
+
+.pend{background:var(--surface);border-radius:16px;box-shadow:var(--shadow);padding:6px 18px}
+.pend ul{margin:0;padding:0;list-style:none}
+.pend li{padding:12px 0;border-bottom:1px solid var(--line);font-size:14px}
+.pend li:last-child{border-bottom:0}
+.pend b{color:var(--brown)}
+
+a{color:var(--brown);text-decoration:underline;text-underline-offset:2px}
+a:hover{color:var(--accent)}
+.foot{font-size:12px;color:var(--ink-soft);display:flex;flex-wrap:wrap;gap:6px 18px;justify-content:space-between;border-top:1px solid var(--line);padding-top:14px}
+</style>
+
+<div class="wrap">
+
+  <div class="timbre">
+    <div class="marca">BADAUÊ</div>
+    <div class="assinatura">
+      <b>Plataforma de Inovação Cultural</b><br>
+      <i>Enaltecendo o gingado brasileiro</i><br>
+      alabadaue.com · @alabadaue
+    </div>
+  </div>
+
+  <header class="top">
+    <div class="brandline">
+      <span class="eyebrow">AVVA · Meta Ads · conta 795677386764219</span>
+    </div>
+    <span class="stamp">Última atualização: 02/10/2026</span>
+  </header>
+
+  <section>
+    <div class="sechead">
+      <h2>Setembro em números</h2>
+      <p>Mídia paga e resultado do negócio, lado a lado.</p>
+    </div>
+    <div class="figures">
+      <div class="fig"><span class="eyebrow">Investido</span><span class="v num">R$ 5.001</span><span class="n">cobrado pelo Meta no mês</span></div>
+      <div class="fig"><span class="eyebrow">Visitas ao site</span><span class="v num">8.661</span><span class="n">todas as origens, em setembro</span></div>
+      <div class="fig"><span class="eyebrow">Formulários enviados</span><span class="v num">72</span><span class="n">chegaram para a equipe contatar</span></div>
+      <div class="fig"><span class="eyebrow">Perdidos na API do EVO</span><span class="v num">63</span><span class="n">formulários que não chegaram</span></div>
+      <div class="fig"><span class="eyebrow">Conversas no WhatsApp</span><span class="v num">432</span><span class="n">origem ainda não medida</span></div>
+    </div>
+
+    <div class="destaque">
+      <div class="big">
+        <span class="v">24</span>
+        <span class="k">novos alunos em setembro</span>
+      </div>
+      <div class="apoio">
+        <div><span class="n">12,5%</span><span class="t">da base atual, que fechou o mês com 192 alunos ativos</span></div>
+        <div><span class="n">1 a cada 3</span><span class="t">dos 72 que chegaram virou aluno</span></div>
+        <div><span class="n">R$ 208</span><span class="t">por aluno, teto, dividindo toda a verba do mês</span></div>
+      </div>
+    </div>
+    <p class="soft"><b>O site recebeu 8.661 visitas em setembro.</b> Dali saíram 135 formulários, dos quais só 72 chegaram para a equipe, mais parte dos 432 contatos de WhatsApp do mês. Contando só o formulário, a conversão do site é de 1,56%, e ela está subestimada: quem prefere conversar não preenche nada, clica no WhatsApp e some da conta. Dividindo toda a verba pelos 135 formulários, o custo é de <b>R$ 37,04</b>, e seria menor ainda se soubéssemos quantas das 432 conversas nasceram de um anúncio. O Meta só rastreou 21 desses formulários, porque o Pixel entrou em 17/09 e o site ainda não grava a origem.</p>
+  </section>
+
+  <section>
+    <div class="sechead">
+      <h2>Para que serviu o dinheiro</h2>
+      <p>Os R$ 5.000,54 cobrados no mês, por objetivo de campanha.</p>
+    </div>
+    <div class="tablewrap">
+      <table>
+        <caption>Setembro de 2026, por objetivo</caption>
+        <thead>
+          <tr><th>Objetivo</th><th>Investido</th><th>% do mês</th><th>Resultado</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Visitas ao perfil do Instagram</td><td>R$ 1.783</td><td><span class="cell">35,7%<span class="bar"><i style="width:35.7%"></i></span></span></td><td>6.335 visitas ao perfil</td></tr>
+          <tr><td>Formulário enviado no site</td><td>R$ 1.188</td><td><span class="cell">23,8%<span class="bar forte"><i style="width:23.8%"></i></span></span></td><td>21 formulários, rastreados só a partir de 17/09</td></tr>
+          <tr><td>Visitas ao site, campanha de Tráfego</td><td>R$ 1.072</td><td><span class="cell">21,4%<span class="bar"><i style="width:21.4%"></i></span></span></td><td>4.083 visitas</td></tr>
+          <tr><td>Alcance da vaga, até 20/09</td><td>R$ 318</td><td><span class="cell">6,4%<span class="bar"><i style="width:6.4%"></i></span></span></td><td>104.986 pessoas alcançadas</td></tr>
+          <tr><td>Conversas no Direct, até 11/09</td><td>R$ 31</td><td><span class="cell">0,6%<span class="bar"><i style="width:0.6%"></i></span></span></td><td>6 conversas</td></tr>
+          <tr><td>AVVA Experience, campanha apagada</td><td>R$ 608</td><td><span class="cell">12,2%<span class="bar"><i style="width:12.2%"></i></span></span></td><td>-</td></tr>
+        </tbody>
+        <tfoot><tr><td>Total cobrado em setembro</td><td>R$ 5.001</td><td>100%</td><td>72 formulários enviados e 24 novos alunos</td></tr></tfoot>
+      </table>
+    </div>
+    <p class="soft">Mais de um terço da verba foi para visitas ao perfil, que não viram contato. Só um quarto foi para a campanha que pede o formulário. <b>Em outubro essa proporção se inverte.</b> Os R$ 608 da AVVA Experience aparecem na fatura e não na tabela, porque a campanha foi apagada. Campanha excluída leva o resultado junto, então vale desligar em vez de apagar.</p>
+  </section>
+
+  <section>
+    <div class="sechead">
+      <h2>Outubro: R$ 5.000 bem divididos</h2>
+      <p>Cinco campanhas de formulário, duas pequenas para AVVA Day e AVVA Touch, R$ 380 para conteúdo e R$ 350 para escalar o que funcionar.</p>
+    </div>
+    <div class="plano">
+      <div class="planototal">
+        <span class="eyebrow">Orçamento do mês</span>
+        <span class="mv num">R$ 5.000</span>
+        <span class="n soft">R$ 4.270 nas sete campanhas, cerca de R$ 138 por dia, e R$ 730 em reservas: R$ 380 para impulsionar conteúdo e R$ 350 para escalar</span>
+        <div class="objsplit">
+          <div class="row"><span class="lab"><span>Alto padrão, 3 km</span><span class="num">R$ 1.240</span></span><span class="track"><span class="fill" style="width:24.8%"></span></span></div>
+          <div class="row"><span class="lab"><span>Mulheres, emagrecimento</span><span class="num">R$ 775</span></span><span class="track"><span class="fill" style="width:15.5%"></span></span></div>
+          <div class="row"><span class="lab"><span>Bairros nobres</span><span class="num">R$ 620</span></span><span class="track"><span class="fill" style="width:12.4%"></span></span></div>
+          <div class="row"><span class="lab"><span>AVVA Senior, 70 e mais</span><span class="num">R$ 620</span></span><span class="track"><span class="fill" style="width:12.4%"></span></span></div>
+          <div class="row"><span class="lab"><span>Remarketing</span><span class="num">R$ 465</span></span><span class="track"><span class="fill" style="width:9.3%"></span></span></div>
+          <div class="row"><span class="lab"><span>Impulsionamentos</span><span class="num">R$ 380</span></span><span class="track"><span class="fill" style="width:7.6%"></span></span></div>
+          <div class="row"><span class="lab"><span>Reserva de escala</span><span class="num">R$ 350</span></span><span class="track"><span class="fill" style="width:7%"></span></span></div>
+          <div class="row"><span class="lab"><span>AVVA Day, viajantes</span><span class="num">R$ 300</span></span><span class="track"><span class="fill" style="width:6%"></span></span></div>
+          <div class="row"><span class="lab"><span>AVVA Touch, base</span><span class="num">R$ 250</span></span><span class="track"><span class="fill" style="width:5%"></span></span></div>
+        </div>
+      </div>
+      <div class="tablewrap flat">
+        <table>
+          <caption>Estrutura de outubro</caption>
+          <thead><tr><th>Campanha</th><th>Por dia</th><th>No mês</th><th>Objetivo</th></tr></thead>
+          <tbody>
+            <tr><td>Leads | Alto Padrão</td><td>R$ 40</td><td><span class="cell">R$ 1.240<span class="bar forte"><i style="width:100%"></i></span></span></td><td>Formulário de visita guiada enviado</td></tr>
+            <tr><td>Leads | Mulheres<span class="obs">ângulo de emagrecimento</span></td><td>R$ 25</td><td><span class="cell">R$ 775<span class="bar"><i style="width:62%"></i></span></span></td><td>Formulário enviado, com o ângulo de emagrecimento acompanhado</td></tr>
+            <tr><td>Leads | Bairros Nobres</td><td>R$ 20</td><td><span class="cell">R$ 620<span class="bar"><i style="width:50%"></i></span></span></td><td>Formulário enviado, de quem mora fora do raio de 3 km</td></tr>
+            <tr><td>Leads | AVVA Senior</td><td>R$ 20</td><td><span class="cell">R$ 620<span class="bar"><i style="width:50%"></i></span></span></td><td>Formulário enviado pela própria pessoa</td></tr>
+            <tr><td>Remarketing<span class="obs">criativo em produção</span></td><td>R$ 15</td><td><span class="cell">R$ 465<span class="bar"><i style="width:37.5%"></i></span></span></td><td>Voltar ao site e enviar o formulário</td></tr>
+            <tr><td>AVVA Day | Viajantes</td><td>R$ 10</td><td><span class="cell">R$ 300<span class="bar"><i style="width:24%"></i></span></span></td><td>Compra do day use direto no site</td></tr>
+            <tr><td>AVVA Touch | Base<span class="obs">criativo em produção</span></td><td>R$ 8</td><td><span class="cell">R$ 250<span class="bar"><i style="width:20%"></i></span></span></td><td>Compra da sessão direto no site</td></tr>
+            <tr><td>Impulsionamentos de conteúdo</td><td>sob demanda</td><td><span class="cell">R$ 380<span class="bar"><i style="width:30.6%"></i></span></span></td><td>Alcance e visualização, alimentando o remarketing</td></tr>
+            <tr><td>Reserva de escala, dias 11 e 21<span class="obs">recebe o que as campanhas atrasadas não gastarem, podendo chegar a R$ 580</span></td><td>sem valor fixo</td><td><span class="cell">R$ 350<span class="bar"><i style="width:28.2%"></i></span></span></td><td>Reforço em duas rodadas, na campanha de menor custo por formulário</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <p class="soft"><b>Cinco campanhas de formulário é o limite desta verba.</b> Abaixo de R$ 20 por dia o Meta não consegue aprender quem converte, então preferimos cinco frentes bem alimentadas a sete pela metade. <b>O público semelhante saiu do plano:</b> com 192 alunos na lista, o Meta fica no piso do que aceita e devolve um público genérico. A verba foi para bairros nobres, que escolhe gente real de Florianópolis por endereço. <b>AVVA Day e AVVA Touch vendem direto no site</b>, então entram como campanha de vendas, otimizada por clique enquanto o volume for pequeno: com R$ 10 e R$ 8 por dia o Meta não junta compras suficientes para otimizar por compra. Para medir, o Pixel precisa registrar o evento de compra nas duas páginas. <b>A reserva de escala é de R$ 350 e deve chegar perto de R$ 580 sem o mês passar de R$ 5.000,</b> porque remarketing, AVVA Touch e o depoimento do Jeff dependem de criativo em produção: cada dia parado não é verba nova, é verba que sai da campanha parada e entra na reserva. Ela engorda justamente quando já sabemos quem está rendendo, que é o melhor momento para gastá-la. <b>A reserva de impulsionamentos é de R$ 400,</b> cerca de R$ 100 por semana, sempre pelo Gerenciador, nunca pelo botão do app.</p>
+  </section>
+
+  <section>
+    <div class="sechead">
+      <h2>Para quem cada campanha fala</h2>
+      <p>Quem é a pessoa, o que queremos dela e como o Meta a encontra.</p>
+    </div>
+    <div class="publicos">
+      <article class="pub">
+        <header><span class="chip good">Validado · R$ 1.395</span></header>
+        <h3>Mora ou trabalha a dez minutos daqui e já cuida de si</h3>
+        <p class="quem">Adulto de 30 a 60 anos no Centro, Beira-Mar Norte, Agronômica e Coqueiros. Já faz pilates, yoga ou spa, viaja com frequência e compara qualidade antes de preço. Procura academia sim, só que uma que dê conta do corpo inteiro, do treino ao recovery.</p>
+        <p class="obj"><b>Objetivo:</b> formulário de visita guiada enviado. É o público que já provou: chegou a R$ 27,64 por formulário na melhor fase de setembro.</p>
+        <p class="tec"><b>No Meta:</b> raio de 3 km · idade mínima 25 no conjunto e 30 no anúncio · <b>Interesses:</b> Pilates services (fitness), Studio Pilates, Yoga (spirituality), Hatha yoga, Spas (personal care), Sauna, Health and wellness (personal care), Wellness (personal care), Health club (fitness), Self care (psychology) · <b>e, junto, renda:</b> People in Brazil who prefer high-value goods (18 milhões no Brasil) ou Frequent international travellers ou Engaged shoppers</p>
+      </article>
+
+      <article class="pub">
+        <header><span class="chip novo">Novo · R$ 620</span></header>
+        <h3>Alto padrão que mora longe do Centro</h3>
+        <p class="quem">Jurerê Internacional, Lagoa da Conceição, Santo Antônio de Lisboa, Cacupé e Campeche. Mesmo perfil de renda e de hábito do público validado, só que fora do raio de 3 km, onde hoje nenhuma campanha fala. São pessoas reais de Florianópolis, escolhidas por endereço, não por estimativa de algoritmo.</p>
+        <p class="obj"><b>Objetivo:</b> descobrir se a distância derruba o envio do formulário ou se esse público aceita atravessar a ilha. A resposta vale mais que os R$ 620, porque define até onde a AVVA pode anunciar. <b>O criativo principal é o depoimento do Jeff,</b> que mora no Pântano do Sul e vem assim mesmo: a objeção respondida por quem já a venceu. Está em produção, e até ficar pronto a campanha sobe com o criativo de alto padrão.</p>
+        <p class="tec"><b>No Meta:</b> cinco pontos no mapa com 2 km cada, em Jurerê Internacional, Lagoa da Conceição, Santo Antônio de Lisboa, Cacupé e Campeche · 30 anos ou mais · mesmos interesses do público validado <b>e, junto, uma camada mais dura de renda:</b> People in Brazil who prefer high-value goods, Luxury goods (retail), Luxury resorts (lodging), luxury travel (travel and tourism), Luxury yacht (watercraft), Golf (sport) ou Wine (alcoholic drinks)</p>
+      </article>
+
+      <article class="pub">
+        <header><span class="chip novo">Novo · R$ 775</span></header>
+        <h3>Mulher de 30 a 55 que quer emagrecer com acompanhamento</h3>
+        <p class="quem">Num raio de 10 km. Já tentou dieta por conta, já teve academia sem orientação e hoje procura método: avaliação, treino de força, aula e alguém olhando a evolução de perto. Decide pela praticidade, porque tudo precisa caber na semana dela.</p>
+        <p class="obj"><b>Objetivo:</b> formulário enviado, com o emagrecimento como porta de entrada. É a busca mais comum do público feminino e hoje nenhuma campanha da AVVA responde a ela, nem a concorrência fala disso em anúncio.</p>
+        <p class="tec"><b>No Meta:</b> raio de 10 km · mulheres de 30 a 55 anos · <b>Interesses:</b> Physical fitness (fitness), Strength training (fitness), Functional training, Fitness services (fitness), Health club (fitness), Healthy diet (personal care), Nutrition, Organic food (food and drink), healthy habits (lifestyle content), Running (sport), Pilates services (fitness), Self care (psychology) · exclui alunas e quem já enviou o formulário</p>
+        <p class="tec"><b>Regra do Meta:</b> não existe interesse de emagrecimento ou dieta para segmentar, é categoria sensível e foi retirada. Por isso a segmentação é por hábito, treino e alimentação, e o tema aparece no criativo. O anúncio também não aceita antes e depois, promessa de resultado em número nem fala negativa sobre o corpo, sob pena de reprovação.</p>
+      </article>
+
+      <article class="pub">
+        <header><span class="chip novo">Novo · R$ 620</span></header>
+        <h3>Setenta anos ou mais, ativo e decidindo por si</h3>
+        <p class="quem">Quem tem 65 anos ou mais na Grande Florianópolis, ativo no Facebook, interessado em caminhada, saúde e convívio. Gente que ainda dirige, viaja e decide a própria rotina, e que procura um lugar seguro para se movimentar com acompanhamento.</p>
+        <p class="obj"><b>Objetivo:</b> formulário do AVVA Senior enviado, pela própria pessoa ou por quem cuida dela. Dois criativos: a aula, com professor por perto, e o depoimento da Preta, que é quem já vive isso. É um público que quase ninguém disputa na cidade, com mídia mais barata e decisão mais rápida quando existe acompanhamento profissional.</p>
+        <p class="tec"><b>No Meta:</b> Grande Florianópolis · 65 anos ou mais · feed do Facebook, que é onde esse público está · <b>Interesses:</b> Walking (outdoors activities), Power walking, Physical fitness (fitness), Health club (fitness), Retirement community (property), Retirement planning (banking). <b>Atenção:</b> o Meta não tem interesse de longevidade, fisioterapia como tema nem cuidado com idosos, só cargos profissionais parecidos, então o filtro forte é idade, local e o próprio criativo</p>
+      </article>
+
+      <article class="pub">
+        <header><span class="chip warn">Em uso · R$ 465</span><span class="chip neutral">criativo em produção</span></header>
+        <h3>Já olhou, se interessou e não concluiu</h3>
+        <p class="quem">Quem abriu o site nos últimos 30 dias sem preencher o formulário, quem assistiu a metade de um vídeo, quem interagiu com o perfil e quem conversou no WhatsApp nos últimos 180 dias. Em setembro o site recebeu 8.661 visitas e 135 formulários, pouco mais de 1,5%. Parte dos que não preencheram foi para o WhatsApp, o resto saiu sem fazer nada, e é esse grupo que o remarketing persegue.</p>
+        <p class="obj"><b>Objetivo:</b> tirar a dúvida que travou a decisão, com o depoimento da Cynthia, que está em produção, e o criativo de recovery como apoio. É a verba que costuma render o formulário mais barato.</p>
+        <p class="tec">Públicos personalizados do Pixel, do perfil e das conversas · exclui quem já preencheu o formulário, para não pagar duas vezes pela mesma pessoa</p>
+      </article>
+
+      <article class="pub">
+        <header><span class="chip novo">Novo · R$ 300</span></header>
+        <h3>Está passando uns dias em Florianópolis</h3>
+        <p class="quem">Quem está na cidade e mora em outro lugar, de 30 a 60 anos, com interesse em hotéis, aluguel por temporada e viagem. Outubro abre a temporada, e esse público decide no mesmo dia: procura o que fazer pela manhã e resolve pelo celular.</p>
+        <p class="obj"><b>Objetivo:</b> vender o AVVA Day direto no site, sem passar por atendimento. A decisão é imediata e a pessoa fica poucos dias na cidade, então o anúncio leva direto para a página de compra. É também a porta de entrada mais barata para alguém conhecer a casa.</p>
+        <p class="tec"><b>No Meta:</b> Florianópolis com a opção <b>pessoas visitando esta região</b> · 30 a 60 anos · <b>Interesses:</b> Travel (travel and tourism), Tourism (industry), Hotels (lodging), Boutique hotel, Luxury resorts (lodging), Resort (travel and tourism business), Holiday rental (lodging), luxury travel (travel and tourism) · <b>Comportamentos:</b> Frequent travellers, Frequent international travellers, Business travel (travel and tourism business) · Stories e Reels</p>
+      </article>
+
+      <article class="pub">
+        <header><span class="chip warn">Base · R$ 250</span><span class="chip neutral">em produção</span></header>
+        <h3>Já é da base e ainda não conhece o Touch</h3>
+        <p class="quem">Alunos, seguidores do perfil e quem já visitou o site. Gente que confia na marca, circula pelo espaço e só não sabe que pode agendar uma sessão.</p>
+        <p class="obj"><b>Objetivo:</b> vender a sessão do AVVA Touch direto no site. É receita vinda de quem já está dentro, com o custo mais baixo da conta, porque não precisa apresentar a marca. <b>Criativo em produção.</b> A campanha sobe assim que o vídeo ficar pronto, junto com o link da página de compra.</p>
+        <p class="tec"><b>No Meta:</b> públicos personalizados da lista de alunos, dos seguidores do perfil e dos visitantes do site, sem interesse nenhum · se precisar ampliar, Interesses Wellness (personal care), Massages, Stone massage, Sauna e Self care (psychology) · botão para a página de compra · criativo 02, o do recovery</p>
+      </article>
+    </div>
+    <p class="soft"><b>Três buscas que voltaram vazias, e isso muda o plano:</b> o Meta não oferece mais interesse de emagrecimento ou dieta, não tem longevidade e não tem cuidado com idosos. São categorias sensíveis que a plataforma retirou. Onde o interesse não existe, o filtro passa a ser idade, localização e criativo, que é como as campanhas de mulheres e de Senior estão montadas. <b>Sobre renda:</b> People in Brazil who prefer high-value goods alcança 18 milhões no país e é o filtro mais duro disponível. A versão mid-value and high-value chega a 46 milhões e serve se o alcance ficar apertado demais no raio de 3 km.</p>
+  </section>
+
+  <section>
+    <div class="sechead">
+      <h2>Benchmark: a JOY</h2>
+      <p>A única concorrente direta que anuncia com volume em Florianópolis. Levantado na Biblioteca de Anúncios em 01/10.</p>
+    </div>
+
+    <div class="figures">
+      <div class="fig"><span class="eyebrow">Anúncios ativos</span><span class="v num">22</span><span class="n">dez deles subidos entre 23 e 29/09</span></div>
+      <div class="fig"><span class="eyebrow">Formato</span><span class="v num">vídeo</span><span class="n">de 28 segundos a 3min43</span></div>
+      <div class="fig"><span class="eyebrow">Destino</span><span class="v num">WhatsApp</span><span class="n">na maioria, alguns com formulário</span></div>
+      <div class="fig"><span class="eyebrow">Unidades</span><span class="v num">2</span><span class="n">Mauro Ramos e Esteves Júnior, criativos separados</span></div>
+    </div>
+
+    <div class="tablewrap">
+      <table>
+        <caption>Anúncios da JOY no ar em 01/10 e quem responde por nós</caption>
+        <thead><tr><th>Anúncio dela</th><th>Duração</th><th>Ângulo</th><th>Nossa campanha que bate de frente</th></tr></thead>
+        <tbody>
+          <tr><td><a href="https://www.facebook.com/ads/library/?active_status=all&amp;ad_type=all&amp;country=BR&amp;search_type=keyword_unordered&amp;media_type=all&amp;q=1484083853534913" target="_blank" rel="noopener">Conhecer por fotos é uma coisa, viver é outra</a></td><td>3min43</td><td>Tour completo pela unidade</td><td><b>Alto Padrão</b>, com o criativo 01, e o 03 quando ficar pronto</td></tr>
+          <tr><td><a href="https://www.facebook.com/ads/library/?active_status=all&amp;ad_type=all&amp;country=BR&amp;search_type=keyword_unordered&amp;media_type=all&amp;q=1065209943181351" target="_blank" rel="noopener">Joy of You, da recepção à banheira aquecida</a></td><td>49s</td><td>Experiência do começo ao fim</td><td><b>Alto Padrão</b> com o criativo 02, o do recovery, e <b>Bairros Nobres</b> com o depoimento do Jeff quando sair</td></tr>
+          <tr><td><a href="https://www.facebook.com/ads/library/?active_status=all&amp;ad_type=all&amp;country=BR&amp;search_type=keyword_unordered&amp;media_type=all&amp;q=1636944628010884" target="_blank" rel="noopener">Uma rotina mais leve começa por um lugar que cuida</a></td><td>imagem</td><td>Piscina, pilates, musculação e recovery numa lista</td><td><b>Alto Padrão</b>. Ela cita recovery de passagem, nós fazemos dele o tema inteiro</td></tr>
+          <tr><td><a href="https://www.facebook.com/ads/library/?active_status=all&amp;ad_type=all&amp;country=BR&amp;search_type=keyword_unordered&amp;media_type=all&amp;q=2196548011072813" target="_blank" rel="noopener">O dia da influenciadora no clube</a></td><td>1min29</td><td>Prova social com perfil local</td><td><b>Remarketing</b> com a Cynthia e <b>Bairros Nobres</b> com o Jeff, os dois em produção</td></tr>
+          <tr><td><a href="https://www.facebook.com/ads/library/?active_status=all&amp;ad_type=all&amp;country=BR&amp;search_type=keyword_unordered&amp;media_type=all&amp;q=1752101172734420" target="_blank" rel="noopener">Quer passar um dia na Joy igual a Luiza?</a></td><td>1min02</td><td>Day use como porta de entrada</td><td><b>AVVA Day</b>, com a diferença de vender no site em vez de conversar no WhatsApp</td></tr>
+          <tr><td><a href="https://www.facebook.com/ads/library/?active_status=all&amp;ad_type=all&amp;country=BR&amp;search_type=keyword_unordered&amp;media_type=all&amp;q=1514918593983912" target="_blank" rel="noopener">Agende uma visita, preencha seu cadastro</a></td><td>45s</td><td>Convite direto, com formulário</td><td><b>Alto Padrão</b> e <b>Bairros Nobres</b>. Mesmo pedido, só que para público mais fechado</td></tr>
+          <tr><td><a href="https://www.facebook.com/ads/library/?active_status=all&amp;ad_type=all&amp;country=BR&amp;search_type=keyword_unordered&amp;media_type=all&amp;q=1782957003046757" target="_blank" rel="noopener">Cinco motivos para treinar na piscina</a></td><td>1min50</td><td>Um diferencial por vez, em lista</td><td><b>Mulheres</b>, com o criativo 04, que troca a lista de equipamentos por método e acompanhamento</td></tr>
+          <tr><td>nenhum</td><td>-</td><td>Ela não fala com 70 anos ou mais nem separa campanha feminina</td><td><b>AVVA Senior</b> e <b>Mulheres</b> entram sem concorrência direta</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="soft">Biblioteca completa, atualizada em tempo real: <a href="https://www.facebook.com/ads/library/?active_status=active&amp;ad_type=all&amp;country=BR&amp;q=JOY%20Wellness%20Club&amp;search_type=keyword_unordered" target="_blank" rel="noopener">todos os anúncios ativos da JOY</a>. Vale abrir toda semana para ver o que entrou.</p>
+
+    <div class="cards">
+      <div class="card">
+        <span class="k">O que vale copiar</span>
+        <p><b>Vídeo longo funciona nessa categoria.</b> Ela mantém tours de 1 a 3 minutos no ar, não só cortes rápidos. Vale uma versão longa do criativo 03, mostrando a casa inteira.</p>
+        <p><b>Porta de entrada sem compromisso.</b> Day use, beach tennis e natação infantil levam quem ainda não quer plano. Nosso equivalente é o AVVA Day e o AVVA Touch.</p>
+      </div>
+      <div class="card">
+        <span class="k">O que fazer diferente</span>
+        <p><b>Ela manda quase tudo para o WhatsApp.</b> É menos atrito, mas o dado fica solto. Nosso formulário entrega CEP e plano de interesse, e permite medir. Vale testar um conjunto com WhatsApp para comparar custo por contato.</p>
+        <p><b>Rodízio alto de criativo.</b> Dez anúncios novos entre 23 e 29 de setembro. Com dois por conjunto, a AVVA precisa repor a cada quinze dias para não cansar o público.</p>
+      </div>
+      <div class="card">
+        <span class="k">Onde ela não está</span>
+        <p><b>Não anuncia para 70 anos ou mais</b> e não separa campanha feminina. Fala com um público generalista, de família, e deixa esses dois lados abertos.</p>
+        <p><b>Recovery aparece como item de lista</b>, nunca como protagonista do criativo. Sauna, crio e compressão como tema central é um espaço vago na cidade.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sechead">
+      <h2>Criativos por campanha</h2>
+      <p>Versão 4:5 para o feed e 9:16 para Stories e Reels. Nenhum com preço.</p>
+    </div>
+    <div class="prontos">
+      <div class="pronto">
+        <div class="meta"><h3>01 · Alto Padrão</h3><span class="chip good">pronto</span></div>
+        <video controls preload="metadata" src="criativos/avva-altopadrao-feed.mp4"></video>
+        <p>Principal do Alto Padrão e dos Bairros Nobres. <a href="https://drive.google.com/file/d/1KVlTjGT4QloigQ9w_vsuSZlbTfToYjmK/view" target="_blank" rel="noopener" target="_blank" rel="noopener">Abrir arquivo</a></p>
+      </div>
+      <div class="pronto">
+        <div class="meta"><h3>02 · Recovery</h3><span class="chip good">pronto</span></div>
+        <video controls preload="metadata" src="criativos/avva-casa-recovery-feed.mp4"></video>
+        <p>Segundo do Alto Padrão, único do mercado com recovery como tema. Serve também ao Remarketing. <a href="https://drive.google.com/file/d/1IYCRmHiwZXLZSrJFQgSY1E9OplODExu4/view" target="_blank" rel="noopener" target="_blank" rel="noopener">Abrir arquivo</a></p>
+      </div>
+      <div class="pronto">
+        <div class="meta"><h3>AVVA Day</h3><span class="chip good">pronto</span></div>
+        <video controls preload="metadata" src="criativos/avva-day-feed-ciclo6.mp4"></video>
+        <p>Campanha de viajantes, com botão para a página de compra. <a href="https://drive.google.com/file/d/1e2jwqng54tsyhBP0J_ME_q2lcZW8UZIQ/view" target="_blank" rel="noopener" target="_blank" rel="noopener">Abrir arquivo</a></p>
+      </div>
+      <div class="pronto">
+        <div class="meta"><h3>04 · Mulheres</h3><span class="chip good">pronto</span></div>
+        <video controls preload="metadata" src="criativos/avva-leveza-feed.mp4"></video>
+        <p>Campanha de Mulheres, ângulo de emagrecimento com método. <a href="https://drive.google.com/file/d/1bhE2f0a2PzhMOkMocMeuEmKn2AP8ObjO/view" target="_blank" rel="noopener" target="_blank" rel="noopener">Abrir arquivo</a></p>
+      </div>
+      <div class="pronto">
+        <div class="meta"><h3>07 · AVVA Senior</h3><span class="chip good">pronto</span></div>
+        <video controls preload="metadata" src="criativos/avva-senior-feed.mp4"></video>
+        <p>Primeiro do Senior. O segundo é o depoimento da Preta. <a href="https://drive.google.com/file/d/1g0ARNocT-Z7RUmocR2-6Jh9X68qVVwk4/view" target="_blank" rel="noopener" target="_blank" rel="noopener">Abrir arquivo</a></p>
+      </div>
+    </div>
+
+    <div class="tablewrap">
+      <table>
+        <caption>Criativo por campanha</caption>
+        <thead><tr><th>Campanha</th><th>Criativo</th><th>Situação</th><th>Por quê</th></tr></thead>
+        <tbody>
+          <tr><td>Leads | Alto Padrão</td><td>01 Alto padrão<br>02 Recovery</td><td><span class="chip good">os dois prontos</span></td><td>Público que já conhece a casa de vista. Responde à marca e ao recovery, que é o diferencial</td></tr>
+          <tr><td>Leads | Bairros Nobres</td><td>Depoimento do Jeff<br>01 Alto padrão</td><td><span class="chip warn">Jeff em produção</span><br><span class="chip good">01 pronto</span></td><td>O Jeff mora no Pântano do Sul e vem assim mesmo. É a objeção da distância respondida por quem já a venceu</td></tr>
+          <tr><td>Leads | Mulheres</td><td>04 Mulheres</td><td><span class="chip good">pronto</span></td><td>Emagrecimento com método e acompanhamento, sem promessa e sem antes e depois</td></tr>
+          <tr><td>Leads | AVVA Senior</td><td>07 Senior<br>Depoimento da Preta</td><td><span class="chip good">07 pronto</span><br><span class="chip warn">Preta em produção</span></td><td>A aula com professor por perto, e uma aluna contando como é na prática</td></tr>
+          <tr><td>Remarketing</td><td>Depoimento da Cynthia<br>02 Recovery como apoio</td><td><span class="chip warn">em produção</span></td><td>Fala com quem já viu o site e não enviou o formulário</td></tr>
+          <tr><td>AVVA Touch | Base</td><td>Criativo próprio do Touch</td><td><span class="chip warn">em produção</span></td><td>Fala com quem já é da base e ainda não conhece o serviço</td></tr>
+          <tr><td>AVVA Day | Viajantes</td><td>Um dia avulso, da chegada ao recovery</td><td><span class="chip good">pronto</span></td><td>Decide e compra pelo celular, no mesmo dia</td></tr>
+          <tr><td>Impulsionamentos</td><td>Post do mês e conteúdo do AVVA Insights</td><td><span class="chip neutral">conforme o orgânico</span></td><td>Constrói confiança e alimenta o remarketing com quem assiste</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tablewrap">
+      <table>
+        <caption>Arquivos no Drive</caption>
+        <thead><tr><th>Arquivo</th><th>Onde entra</th><th>Situação</th></tr></thead>
+        <tbody>
+          <tr><td><a href="https://drive.google.com/file/d/1KVlTjGT4QloigQ9w_vsuSZlbTfToYjmK/view" target="_blank" rel="noopener">avva-altopadrao-feed.mp4</a></td><td>Alto Padrão e Bairros Nobres</td><td><span class="chip good">pronto</span></td></tr>
+          <tr><td><a href="https://drive.google.com/file/d/1IYCRmHiwZXLZSrJFQgSY1E9OplODExu4/view" target="_blank" rel="noopener">avva-casa-recovery-feed.mp4</a></td><td>Alto Padrão e Remarketing</td><td><span class="chip good">pronto</span></td></tr>
+          <tr><td><a href="https://drive.google.com/file/d/1bhE2f0a2PzhMOkMocMeuEmKn2AP8ObjO/view" target="_blank" rel="noopener">avva-leveza-feed.mp4</a></td><td>Mulheres</td><td><span class="chip good">pronto</span></td></tr>
+          <tr><td><a href="https://drive.google.com/file/d/1g0ARNocT-Z7RUmocR2-6Jh9X68qVVwk4/view" target="_blank" rel="noopener">avva-senior-feed.mp4</a></td><td>AVVA Senior</td><td><span class="chip good">pronto</span></td></tr>
+          <tr><td><a href="https://drive.google.com/file/d/1e2jwqng54tsyhBP0J_ME_q2lcZW8UZIQ/view" target="_blank" rel="noopener">avva-day-feed-ciclo6.mp4</a></td><td>AVVA Day</td><td><span class="chip good">pronto</span></td></tr>
+          <tr><td><a href="https://drive.google.com/drive/folders/1sgEXYRAdSlTtS8f53RA4FLFZxpmsF5Ha" target="_blank" rel="noopener">Pasta Outubro</a></td><td>todos os arquivos do mês</td><td><span class="chip neutral">no Drive</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="soft">Cada conjunto começa com <b>dois criativos</b>, nunca mais que isso, para o Meta juntar dados suficientes em cada um. <b>Cinco já estão prontos</b> em versão de feed e <b>quatro estão em produção</b>: os depoimentos do Jeff, da Preta e da Cynthia, mais o do AVVA Touch. Falta também a versão 9:16 dos prontos, que é o formato onde a verba se concentra.</p>
+  </section>
+
+  <section>
+    <div class="sechead">
+      <h2>Segunda rodada de copy, a partir de 16/10</h2>
+      <p>Mesmos vídeos, texto novo. Trocar só a palavra isola a variável e custa produção zero.</p>
+    </div>
+    <div class="tablewrap">
+      <table>
+        <caption>Rodada 2, da segunda quinzena</caption>
+        <thead><tr><th>Campanha</th><th>Vídeo</th><th>O que muda no texto</th><th>Hipótese que está sendo testada</th></tr></thead>
+        <tbody>
+          <tr><td>Leads | Alto Padrão</td><td>01 Alto padrão</td><td>Sai a apresentação da casa, entra a rotina resolvida: musculação, estúdios e recovery no mesmo endereço, no Centro</td><td>Quem mora perto decide por praticidade, não por conceito</td></tr>
+          <tr><td>Leads | Bairros Nobres</td><td>Depoimento do Jeff</td><td>O bairro entra na primeira linha: do Pântano do Sul ao Centro, três vezes por semana</td><td>Nomear a distância vence a objeção mais rápido que ignorá-la</td></tr>
+          <tr><td>Leads | Mulheres</td><td>04 Mulheres</td><td>Sai o método, entra o tempo: o que cabe em quarenta minutos, três vezes por semana, com acompanhamento</td><td>A barreira dela é agenda, não falta de vontade</td></tr>
+          <tr><td>Leads | AVVA Senior</td><td>Depoimento da Preta</td><td>Sai a lista de benefícios, entra a autonomia concreta: subir escada, viajar, acompanhar os netos</td><td>Resultado tangível convence mais que descrição de aula</td></tr>
+          <tr><td>Remarketing</td><td>Depoimento da Cynthia</td><td>Texto que assume a visita anterior: você conheceu o espaço pelo site, agora veja por quem já treina aqui</td><td>Reconhecer o retorno reduz o atrito de quem já hesitou uma vez</td></tr>
+          <tr><td>AVVA Day</td><td>AVVA Day</td><td>Entra a temporada: um dia inteiro sem plano e sem matrícula, enquanto você está na ilha</td><td>Urgência de estadia curta acelera a compra no mesmo dia</td></tr>
+          <tr><td>AVVA Touch</td><td>Criativo do Touch</td><td>Sai a apresentação do serviço, entra o encaixe na rotina: a sessão que fecha a semana de treino</td><td>Quem já é da base responde a ocasião, não a novidade</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="soft"><b>Como roda:</b> no dia 16 o texto novo entra como segundo anúncio dentro do mesmo conjunto, com o mesmo vídeo e o mesmo público, e o texto antigo continua no ar. Até o dia 24 um dos dois já mostra custo por formulário menor, e o perdedor sai. <b>Só o texto muda</b>, porque mexer em vídeo e copy ao mesmo tempo não permite saber o que funcionou.</p>
+  </section>
+
+  <section>
+    <div class="sechead">
+      <h2>Como o mês corre</h2>
+      <p>Uma decisão por semana, nada de ajuste diário.</p>
+    </div>
+    <div class="linha">
+      <div class="etapa"><span class="quando">01 a 07/10</span><span>Saldo adicionado, lista de alunos exportada e as campanhas no ar com dois criativos cada. Remarketing e AVVA Touch entram assim que os criativos deles saírem da produção. Semana de aprendizado, nada muda.</span></div>
+      <div class="etapa"><span class="quando">08 a 14/10</span><span>Primeira leitura confiável. Sai o criativo mais caro de cada conjunto, entram os dois que ficaram de fora.</span></div>
+      <div class="etapa"><span class="quando">11 e 21/10</span><span>A reserva entra em duas rodadas, metade em cada data, sempre na campanha com menor custo por formulário. Mulheres, bairros nobres e Senior são comparados com o alto padrão.</span></div>
+      <div class="etapa"><span class="quando">16 a 24/10</span><span>Entra a segunda rodada de copy, com o mesmo vídeo, e a escala segue controlada: no máximo 30% a cada três dias, só em campanha que está entregando.</span></div>
+      <div class="etapa"><span class="quando">25 a 31/10</span><span>Fechamento, relatório do mês e desenho de novembro com o resultado de mulheres, bairros nobres e Senior.</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sechead">
+      <h2>A meta de outubro</h2>
+      <p>O número que importa é aluno, e ele depende do anúncio e do atendimento.</p>
+    </div>
+    <div class="figures">
+      <div class="fig"><span class="eyebrow">Formulários enviados</span><span class="v num">140</span><span class="n">135 em setembro, com 63 perdidos</span></div>
+      <div class="fig"><span class="eyebrow">Custo por formulário</span><span class="v num">R$ 35,71</span><span class="n">R$ 37,04 em setembro, contando todos</span></div>
+      <div class="fig"><span class="eyebrow">Novos alunos</span><span class="v num">40</span><span class="n">24 em setembro</span></div>
+      <div class="fig"><span class="eyebrow">Custo por aluno</span><span class="v num">R$ 125</span><span class="n">R$ 208 em setembro</span></div>
+    </div>
+    <p class="soft"><b>Quantos formulários são necessários depende inteiramente da conversão do atendimento.</b> Em setembro, de cada três contatados um virou aluno. Se essa taxa se mantiver, 120 formulários bastam para os 40 alunos. Se cair para 25%, são precisos 160. A meta fica em 140, que é o cenário de trabalho com 29% de conversão, e a tabela abaixo serve de régua para saber, no meio do mês, se o ajuste tem que ser de volume ou de atendimento.</p>
+    <div class="tablewrap">
+      <table>
+        <caption>Quantos formulários para 40 alunos</caption>
+        <thead><tr><th>Conversão do atendimento</th><th>Formulários necessários</th><th>Custo por formulário que isso exige</th><th>Viabilidade com R$ 5.000</th></tr></thead>
+        <tbody>
+          <tr><td>33%, a taxa de setembro</td><td>120</td><td>R$ 41,67</td><td><span class="chip good">folgado</span></td></tr>
+          <tr><td>29%, cenário de trabalho</td><td>140</td><td>R$ 35,71</td><td><span class="chip good">é a meta</span></td></tr>
+          <tr><td>25%, se o volume trouxer gente menos pronta</td><td>160</td><td>R$ 31,25</td><td><span class="chip warn">só com custo igual ao melhor de setembro</span></td></tr>
+          <tr><td>20%</td><td>200</td><td>R$ 25,00</td><td><span class="chip bad">não cabe na verba</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="soft">O melhor custo que a conta já alcançou foi <b>R$ 27,64</b>, na melhor fase de setembro, então os R$ 31,25 do cenário de 160 formulários são possíveis, não garantidos. <b>No dia 11 isso deixa de ser teoria:</b> com duas semanas de dados, dá para saber em qual linha dessa tabela a gente está e decidir se a reserva vai para volume ou se a conversa passa a ser sobre atendimento.</p>
+  </section>
+
+  <section>
+    <div class="sechead">
+      <h2>Para destravar outubro</h2>
+      <p>Três pendências para o mês começar.</p>
+    </div>
+    <div class="pend">
+      <ul>
+        <li><b>Adicionar saldo na conta.</b> Zerada e parada desde 01/10. Nada entrega sem isso, e esse passo é da AVVA.</li>
+        <li><b>Exportar a lista de clientes.</b> Os 192 alunos, com nome, e-mail e telefone e consentimento de uso. Serve para o AVVA Touch falar com quem já é da casa e para excluir alunos das campanhas de captação, evitando pagar por quem já está dentro.</li>
+        <li><b>Finalizar os criativos em produção.</b> Os depoimentos do Jeff, da Preta e da Cynthia, mais o do AVVA Touch, e a versão 9:16 dos cinco que já estão prontos, que é o formato onde a verba se concentra. Sem eles, quatro campanhas sobem com um criativo só e o Meta fica sem comparação.</li>
+      </ul>
+    </div>
+  </section>
+
+  <p class="foot">
+    <span>Badauê para AVVA · outubro de 2026</span>
+    <span>Fonte: Gerenciador de Anúncios e faturas da conta 795677386764219, com dados operacionais da AVVA</span>
+  </p>
+</div>
