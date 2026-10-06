@@ -761,7 +761,16 @@ function render(S){
         +'<tr><td>Visitas recebidas</td><td>90</td><td class="cur">–</td><td>–</td></tr>'
         +'<tr class="hl"><td>Convertidos</td><td>20</td><td class="cur">24</td><td '+vPos+'>▲ 20,0%</td></tr>'
         +'</table></div></div>';
-      var notaDay='<div class="panel rv" style="border:1.5px dashed var(--areia)"><div class="pk">AVVA Day · setembro</div><div class="pd">Cliques e compras (online e no balcão) do AVVA Day e do AVVA Day Duo entram aqui assim que os números de setembro chegarem.</div></div>';
+      var notaDay='<div class="gcard" style="margin-top:16px"><div class="ghead">AVVA Day e AVVA Touch · cliques e compras · setembro</div><div class="gwrap"><table class="gt"><col class="c-lbl"><col><col><col><col><col>'
+        +'<tr><th></th><th>Cliques</th><th>Compra online</th><th>Compra balcão</th><th class="cur">Total</th><th>Conversão</th></tr>'
+        +'<tr class="hl"><td>AVVA Day</td><td rowspan="3" style="vertical-align:middle;background:#EDE8DF;font-weight:700;color:var(--marrom)">159</td><td></td><td></td><td class="cur"></td><td rowspan="3" style="vertical-align:middle;background:#EDE8DF;font-weight:700;color:var(--marrom)">3,8%</td></tr>'
+        +'<tr><td style="padding-left:44px">Day Use</td><td>0</td><td>5</td><td class="cur">5</td></tr>'
+        +'<tr><td style="padding-left:44px">7 dias corridos</td><td>0</td><td>1</td><td class="cur">1</td></tr>'
+        +'<tr class="hl"><td>AVVA Touch Externo</td><td rowspan="4" style="vertical-align:middle;background:#EDE8DF;font-weight:700;color:var(--marrom)">0</td><td></td><td></td><td class="cur"></td><td rowspan="4" style="vertical-align:middle;background:#EDE8DF;font-weight:700;color:var(--marrom)">–</td></tr>'
+        +'<tr><td style="padding-left:44px">12 sessões</td><td>0</td><td>1</td><td class="cur">1</td></tr>'
+        +'<tr><td style="padding-left:44px">4 sessões</td><td>0</td><td>0</td><td class="cur">0</td></tr>'
+        +'<tr><td style="padding-left:44px">1 sessão</td><td>0</td><td>1</td><td class="cur">1</td></tr>'
+        +'</table></div></div>';
       var sg=function(cls,w,k,v){return '<div class="fstage '+cls+'" style="width:'+w+'%"><div class="fk">'+k+'</div><div class="fv">'+v+'</div></div>'};
       var sa='<div class="farrow">▼</div>';
       funHtml='<section class="rv"><div class="phead" style="margin-top:44px"><div><div class="kicker">Site · setembro</div><div class="sect-h">Funil de <em>leads.</em></div></div><span class="kpi-tag">8.661 acessos no mês</span></div><div class="fun"><div class="funil">'
@@ -791,6 +800,7 @@ function render(S){
         +'<div class="ins warn"><span class="ic">!</span><div class="t">63 formulários perdidos na EVO</div><div class="d">Dos 135 formulários enviados em setembro, 63 se perderam por causa da EVO e não chegaram à equipe. Na taxa de setembro (4,2% dos contatos viram aluno), só os 63 valeriam perto de 3 matrículas. A cópia automática de cada envio, independente da EVO, já está ativa, então essa perda não deve se repetir nos próximos meses.</div></div>'
         +'<div class="ins warn"><span class="ic">!</span><div class="t">Sem o número de visitas, o funil fica cego no meio</div><div class="d">As visitas de setembro ainda não foram fechadas. Sem esse dado não dá para saber se os 24 alunos vieram de mais visitas ou de mais fechamento por visita, e é justamente aí que está a maior alavanca. Vale registrar toda semana as visitas agendadas e as realizadas, com confirmação na véspera para reduzir quem não aparece.</div></div>'
         +'<div class="ins pos"><span class="ic">▲</span><div class="t">A meta de 40 alunos cabe no volume de hoje</div><div class="d">Setembro gerou 567 contatos. Se 30% deles virarem visita (170) e 1 em cada 4 visitas fechar, são cerca de 42 alunos no mês, já acima da meta. Ou seja, o gargalo não é tráfego, é resposta e agenda. Responder em minutos, oferecer dois horários de visita já na primeira mensagem e insistir em 24 e 72 horas com quem não respondeu. A projeção completa por etapa está nas metas, logo abaixo.<div style="margin-top:14px"><span style="display:inline-block;background:var(--pos);color:var(--branco);font-weight:800;font-size:12.5px;letter-spacing:.3px;padding:7px 14px;border-radius:999px">+16 matrículas por mês</span></div></div></div>'
+        +'<div class="ins warn"><span class="ic">!</span><div class="t">AVVA Day, a compra ainda acontece no balcão</div><div class="d">O AVVA Day teve 159 cliques no site e 6 vendas, 5 de Day Use e 1 de 7 dias corridos, todas no balcão. Em agosto foram 11 vendas com o mesmo volume de cliques, então a conversão caiu de 6,9% para 3,8%. O AVVA Day Duo foi descontinuado e saiu do relatório. O interesse online existe, mas ainda não vira compra online. Vale ativar o checkout no site com um benefício para quem compra antes de chegar, como entrada sem fila, e trabalhar uma disponibilidade limitada por dia para criar urgência.</div></div>'
         +'</div></section>';
     /* abertura do 3º trimestre e metas */
     var tri3Html='';
